@@ -46,36 +46,36 @@ sudo chmod +x install.sh
 
 ### Hodge conjecture
 
-![Hodge conjecture](https://github.com/isaac098098/latex-luasnips/blob/main/assets/hodge.gif)
+![Hodge conjecture](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/hodge.gif)
 
 ### Fatou's lemma
 
-![Fatou's lemma](https://github.com/isaac098098/latex-luasnips/blob/main/assets/fatou.gif)
+![Fatou's lemma](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/fatou.gif)
 
 ### Gauss divergence theorem
 
-![Gauss divergence theorem](https://github.com/isaac098098/latex-luasnips/blob/main/assets/gauss.gif)
+![Gauss divergence theorem](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/gauss.gif)
 
 ### Matrices (due to [evesdropper](https://github.com/evesdropper/luasnip-latex-snippets.nvim))
 
-![Matrices](https://github.com/isaac098098/latex-luasnips/blob/main/assets/matrix.gif)
+![Matrices](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/matrix.gif)
 
 ### Chudnovsky algorithm
 
-![Chudnovsky algorithm](https://github.com/isaac098098/latex-luasnips/blob/main/assets/chudnovsky.gif)
+![Chudnovsky algorithm](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/chudnovsky.gif)
 
 ### Schrödinger equation
 
-![# Schrödinger equation](https://github.com/isaac098098/latex-luasnips/blob/main/assets/sch.gif)
+![# Schrödinger equation](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/sch.gif)
 
 ### Visual placeholder (example from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/intro/))
 
-![Visual placeholder](https://github.com/isaac098098/latex-luasnips/blob/main/assets/it.gif)
+![Visual placeholder](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/it.gif)
 
 The text is first selected using the visual mode with `v`, or `V` for entire lines, then it is then temporarily saved with the `Tab` key, then the snippet is written and expanded. All snippets marked as `visual` do this.
 
 ### From scratch document
 
-![From scratch document](https://github.com/isaac098098/latex-luasnips/blob/main/assets/doc.gif)
+![From scratch document](https://github.com/isaac098098/latex-luasnips-gifs/blob/main/assets/doc.gif)
 
 </details>
