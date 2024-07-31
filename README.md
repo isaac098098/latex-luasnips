@@ -1,6 +1,6 @@
 # latex-luasnips
 
-This repository contains some useful LaTeX snippets for the [LuaSnips](https://github.com/L3MON4D3/LuaSnip) engine, most made by me and some collected from other repositories, specifically, the great snippets for the `case` and `matrix` mathematical environments made by [evesdropper](https://github.com/evesdropper/luasnip-latex-snippets.nvim) and the indispensable `get_visual` function for snippets with visual placeholders, taken from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/luasnip/). This snippets depend on [vimtex](https://github.com/lervag/vimtex) for math context.
+This repository contains some useful LaTeX snippets for the [LuaSnips](https://github.com/L3MON4D3/LuaSnip) engine, most made by me and some collected from other repositories, specifically, the great snippets for the `case` and `matrix` mathematical environments made by [evesdropper](https://github.com/evesdropper/luasnip-latex-snippets.nvim) and the indispensable `get_visual` function for snippets with visual placeholders, taken from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/luasnip/). These snippets depend on [vimtex](https://github.com/lervag/vimtex) for math context.
 
 # What are snippets? What is LaTeX?
 
@@ -72,6 +72,8 @@ sudo chmod +x install.sh
 ### Visual placeholder (example from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/intro/))
 
 ![Visual placeholder](https://github.com/isaac098098/latex-luasnips/blob/main/assets/it.gif)
+
+The text is first selected using the visual mode with `v`, or `V` for entire lines, then it is then temporarily saved with the `Tab` key, then the snippet is written and expanded. All snippets marked as `visual` do this.
 
 ### From scratch document
 
