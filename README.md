@@ -4,7 +4,7 @@ This repository contains some useful LaTeX snippets for the [LuaSnips](https://g
 
 # What are snippets? What is LaTeX?
 
-[ejmastnak](https://ejmastnak.com/tutorials/vim-latex/intro/) answers all these questions better than I could do. His guide is a must read. Another classic on this topic is due to [gillescastel](https://castel.dev/post/lecture-notes-1/). However, you can check out the showcase gifs section to get an idea (and maybe convince you to use them) (not yet added).
+[ejmastnak](https://ejmastnak.com/tutorials/vim-latex/intro/) answers all these questions better than I could do. His guide is a must read. Another classic on this topic is due to [gillescastel](https://castel.dev/post/lecture-notes-1/). However, you can check out the showcase gifs section to get an idea of what this is all about (and maybe convince you to use this) (not yet added).
 
 # Documentation
 
