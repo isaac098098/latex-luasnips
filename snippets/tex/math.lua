@@ -102,7 +102,7 @@ return {
 
 -- Math alphabet identifiers
 
-s({trig = "([^%a])mc", name = "Calligraphic math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mc", name = "Calligraphic math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathcal{"), d(1,get_visual), t("}")
@@ -110,7 +110,7 @@ s({trig = "([^%a])mc", name = "Calligraphic math font", snippetType = "autosnipp
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mr", name = "Roman math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mr", name = "Roman math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathrm{"), d(1,get_visual), t("}")
@@ -118,7 +118,7 @@ s({trig = "([^%a])mr", name = "Roman math font", snippetType = "autosnippet", re
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mb", name = "Bold math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mb", name = "Bold math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathbf{"), d(1,get_visual), t("}")
@@ -126,7 +126,7 @@ s({trig = "([^%a])mb", name = "Bold math font", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ms", name = "Sans serif math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ms", name = "Sans serif math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathsf{"), d(1,get_visual), t("}")
@@ -134,7 +134,7 @@ s({trig = "([^%a])ms", name = "Sans serif math font", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mt", name = "Typewriter math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mt", name = "Typewriter math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathtt{"), d(1,get_visual), t("}")
@@ -142,7 +142,7 @@ s({trig = "([^%a])mt", name = "Typewriter math font", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mn", name = "Normal math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mn", name = "Normal math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathnormal{"), d(1,get_visual), t("}")
@@ -150,7 +150,7 @@ s({trig = "([^%a])mn", name = "Normal math font", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mi", name = "Italic math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mi", name = "Italic math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathit{"), d(1,get_visual), t("}")
@@ -158,7 +158,7 @@ s({trig = "([^%a])mi", name = "Italic math font", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mf", name = "Euler Fraktur math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mf", name = "Euler Fraktur math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathfrak{"), d(1,get_visual), t("}")
@@ -166,7 +166,7 @@ s({trig = "([^%a])mf", name = "Euler Fraktur math font", snippetType = "autosnip
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ma", name = "Blackboard bold math font", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ma", name = "Blackboard bold math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathbb{"), d(1,get_visual), t("}")
@@ -176,7 +176,7 @@ s({trig = "([^%a])ma", name = "Blackboard bold math font", snippetType = "autosn
 
 -- Display environments and alignment structures
 
-s({trig = "([^%a])mm", name = "Inline display", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mm", name = "Inline display", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("$"), d(1,get_visual), t("$")
@@ -300,7 +300,7 @@ s({trig = "fal", name = "New falign"},
     }
 ),
 
-s({trig = "(%d?)cs", name = "New cases environment", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "(%d?)cs", name = "New cases environment", snippetType = "autosnippet", regTrig = true},
 	{
         t("\\begin{cases}"),
 		t({"",""}), d(1,generate_cases),
@@ -309,7 +309,7 @@ s({trig = "(%d?)cs", name = "New cases environment", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])br", name = "Display line break", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "br", name = "Display line break", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\\\"),
@@ -318,7 +318,7 @@ s({trig = "([^%a])br", name = "Display line break", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itr", name = "Short text between lines", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itr", name = "Short text between lines", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\intertext{"), v(1,"text"), t("}")
@@ -326,7 +326,7 @@ s({trig = "([^%a])itr", name = "Short text between lines", snippetType = "autosn
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tx", name = "Text inside display", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tx", name = "Text inside display", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\text{"), v(1,"text"), t("}")
@@ -334,7 +334,7 @@ s({trig = "([^%a])tx", name = "Text inside display", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dib", name = "Display page break", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dib", name = "Display page break", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\displaybreak")
@@ -342,7 +342,7 @@ s({trig = "([^%a])dib", name = "Display page break", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dis", name = "Displaystyle", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dis", name = "Displaystyle", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\displaystyle")
@@ -350,7 +350,7 @@ s({trig = "([^%a])dis", name = "Displaystyle", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ty", name = "Textstyle", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ty", name = "Textstyle", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\textstyle")
@@ -360,7 +360,7 @@ s({trig = "([^%a])ty", name = "Textstyle", snippetType = "autosnippet", regTrig 
 
 -- Equation numbering and tags
 
-s({trig = "([^%a])ntg", name = "Suppress equation tag", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ntg", name = "Suppress equation tag", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\notag")
@@ -368,7 +368,7 @@ s({trig = "([^%a])ntg", name = "Suppress equation tag", snippetType = "autosnipp
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tag", name = "Equation tag", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tag", name = "Equation tag", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -384,7 +384,7 @@ s({trig = "([^%a])tag", name = "Equation tag", snippetType = "autosnippet", regT
     }
 ),
 
-s({trig = "([^%a])teq", name = "Last number equation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "teq", name = "Last number equation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\theequation")
@@ -394,7 +394,7 @@ s({trig = "([^%a])teq", name = "Last number equation", snippetType = "autosnippe
 
 -- Matrix-like environments
 
-s({trig = "([bBpvV])(%d+)x(%d+)", name = "New matrix", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "([bBpvV])(%d+)x(%d+)", name = "New matrix", snippetType = "autosnippet", regTrig = true},
     {
 		t("\\begin{"), f(function(_, snip) return snip.captures[1] .. "matrix" end), t("}"),
 		t({"",""}), d(1,generate_matrix),
@@ -404,7 +404,7 @@ s({trig = "([bBpvV])(%d+)x(%d+)", name = "New matrix", snippetType = "autosnippe
 ),
 
 
-s({trig = "([bBpvV])(%d+),(%d+)", name = "New homogeneous matrix", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "([bBpvV])(%d+),(%d+)", name = "New homogeneous matrix", snippetType = "autosnippet", regTrig = true},
     {
 		t("\\begin{"), f(function(_, snip) return snip.captures[1] .. "matrix" end), t("}"),
 		t({"",""}), d(1,generate_hom_matrix),
@@ -414,7 +414,7 @@ s({trig = "([bBpvV])(%d+),(%d+)", name = "New homogeneous matrix", snippetType =
 ),
 
 
-s({trig = "([bBpvV])gn", name = "New generic matrix", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "([bBpvV])gn", name = "New generic matrix", snippetType = "autosnippet", regTrig = true},
     {
         t("\\begin{"), f(function(_, snip) return snip.captures[1] .. "matrix" end), t("}"),
 		t({"",""}), t("    "), i(1), t("_{11} & "), rep(1), t("_{12} & \\cdots & "), rep(1), t("_{1"), i(2), t("}"), t(" \\\\"),
@@ -463,14 +463,14 @@ s({trig = "¨", name = "Superscript", snippetType = "autosnippet", wordTrig = fa
     {condition = in_mathzone}
 ),
 
-s({trig = "'", name = "Subscript and superscript", snippetType = "autosnippet", wordTrig = false},
+s({trig = "'", name = "Subscript and superscript", snippetType = "autosnippet", wordtrig = false},
     {
 		t("_{"), i(1), t("}^{"), i(2), t("}")
     },
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])st", name = "Stacking", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "st", name = "Stacking", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\substack{"), v(1,"..."), t(" \\\\ "), i(2,"..."), t("}")
@@ -480,7 +480,7 @@ s({trig = "([^%a])st", name = "Stacking", snippetType = "autosnippet", regTrig =
 
 -- Compound structures
 
-s({trig = "([^%a])ltx", name = "Left relation arrow", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lxl", name = "Left relation arrow", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -497,7 +497,7 @@ s({trig = "([^%a])ltx", name = "Left relation arrow", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])rtx", name = "Left relation arrow", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lxr", name = "Left relation arrow", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -514,7 +514,7 @@ s({trig = "([^%a])rtx", name = "Left relation arrow", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cf", name = "Continued fraction", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cf", name = "Continued fraction", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -535,7 +535,7 @@ s({trig = "([^%a])cf", name = "Continued fraction", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])bx", name = "Boxed formula", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "bx", name = "Boxed formula", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\boxed{"), d(1,get_visual), t("}")
@@ -543,7 +543,7 @@ s({trig = "([^%a])bx", name = "Boxed formula", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ff", name = "Fraction", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ff", name = "Fraction", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -563,7 +563,7 @@ s({trig = "([^%a])ff", name = "Fraction", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])bm", name = "Binomial coefficient", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "bm", name = "Binomial coefficient", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -585,7 +585,7 @@ s({trig = "([^%a])bm", name = "Binomial coefficient", snippetType = "autosnippet
 
 -- Decorations
 
-s({trig = "([^%a])abv", name = "Place material above", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "abv", name = "Place material above", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\overset{"), i(1,"above"), t("}{"), v(2,"material"), t("}")
@@ -593,7 +593,7 @@ s({trig = "([^%a])abv", name = "Place material above", snippetType = "autosnippe
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])bel", name = "Place material below", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "bel", name = "Place material below", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\underset{"), i(1,"below"), t("}{"), v(2,"material"), t("}")
@@ -603,7 +603,7 @@ s({trig = "([^%a])bel", name = "Place material below", snippetType = "autosnippe
 
 -- Limiting positions
 
-s({trig = "lim", name = "Above/below operator", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lim", name = "Above/below operator", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\limits")
@@ -611,7 +611,7 @@ s({trig = "lim", name = "Above/below operator", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "nli", name = "Right of the operator", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nli", name = "Right of the operator", snippetType = "autosnippet"},
     {
         t("\\nolimits")
     },
@@ -620,7 +620,7 @@ s({trig = "nli", name = "Right of the operator", snippetType = "autosnippet", re
 
 -- Relations
 
-s({trig = "([^%a])eq", name = "Congruence relation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "eq", name = "Congruence relation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\equiv")
@@ -628,7 +628,7 @@ s({trig = "([^%a])eq", name = "Congruence relation", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mod", name = "Modular relation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mod", name = "Modular relation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -651,7 +651,7 @@ s({trig = "([^%a])mod", name = "Modular relation", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sbg", name = "Left triangle", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sbg", name = "Left triangle", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -668,7 +668,7 @@ s({trig = "([^%a])sbg", name = "Left triangle", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sgc", name = "Right triangle", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sgc", name = "Right triangle", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -685,7 +685,7 @@ s({trig = "([^%a])sgc", name = "Right triangle", snippetType = "autosnippet", re
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ne", name = "Not equal", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ne", name = "Not equal", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ne")
@@ -693,7 +693,7 @@ s({trig = "([^%a])ne", name = "Not equal", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nr", name = "Relation negation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nr", name = "Relation negation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\not")
@@ -701,7 +701,7 @@ s({trig = "([^%a])nr", name = "Relation negation", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])app", name = "Approx", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "app", name = "Approx", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\approx")
@@ -709,7 +709,7 @@ s({trig = "([^%a])app", name = "Approx", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cn", name = "Congruent", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cn", name = "Congruent", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -726,7 +726,7 @@ s({trig = "([^%a])cn", name = "Congruent", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])le", name = "Less or equal", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "le", name = "Less or equal", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\le")
@@ -734,7 +734,7 @@ s({trig = "([^%a])le", name = "Less or equal", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ge", name = "Greater or equal", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ge", name = "Greater or equal", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ge")
@@ -742,7 +742,7 @@ s({trig = "([^%a])ge", name = "Greater or equal", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])pc", name = "Precedes", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "pc", name = "Precedes", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -759,7 +759,7 @@ s({trig = "([^%a])pc", name = "Precedes", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sx", name = "Succedes", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sx", name = "Succedes", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -776,7 +776,7 @@ s({trig = "([^%a])sx", name = "Succedes", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])re", name = "Relation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "re", name = "Relation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -810,7 +810,7 @@ s({trig = "opr", name = "Define new operator"},
     }
 ),
 
-s({trig = "([^%a])ce", name = "Ceiling", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ce", name = "Ceiling", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -827,7 +827,7 @@ s({trig = "([^%a])ce", name = "Ceiling", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])fl", name = "Floor", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "fl", name = "Floor", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -845,7 +845,7 @@ s({trig = "([^%a])fl", name = "Floor", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sq", name = "Square root", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sq", name = "Square root", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -865,7 +865,7 @@ s({trig = "([^%a])sq", name = "Square root", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])imp", name = "Imaginary part", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "imp", name = "Imaginary part", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Im")
@@ -873,7 +873,7 @@ s({trig = "([^%a])imp", name = "Imaginary part", snippetType = "autosnippet", re
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])rpa", name = "Real part", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "rpa", name = "Real part", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Re")
@@ -881,7 +881,7 @@ s({trig = "([^%a])rpa", name = "Real part", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])opm", name = "Mod operator", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "opm", name = "Mod operator", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         i(1,"..."), t(" \\bmod "), i(2,"...")
@@ -889,7 +889,7 @@ s({trig = "([^%a])opm", name = "Mod operator", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mp", name = "Minus plus", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mp", name = "Minus plus", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mp")
@@ -897,7 +897,7 @@ s({trig = "([^%a])mp", name = "Minus plus", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])pm", name = "Plus minus", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "pm", name = "Plus minus", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\pm")
@@ -905,7 +905,7 @@ s({trig = "([^%a])pm", name = "Plus minus", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tm", name = "Times", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tm", name = "Times", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\times")
@@ -913,7 +913,7 @@ s({trig = "([^%a])tm", name = "Times", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cd", name = "Centered dot", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cd", name = "Centered dot", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cdot")
@@ -921,7 +921,7 @@ s({trig = "([^%a])cd", name = "Centered dot", snippetType = "autosnippet", regTr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cir", name = "Circle", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cir", name = "Circle", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\circ")
@@ -929,7 +929,7 @@ s({trig = "([^%a])cir", name = "Circle", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])opl", name = "Oplus", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "opl", name = "Oplus", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\oplus")
@@ -937,7 +937,7 @@ s({trig = "([^%a])opl", name = "Oplus", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])omt", name = "Otimes", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "omt", name = "Otimes", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\otimes")
@@ -945,7 +945,7 @@ s({trig = "([^%a])omt", name = "Otimes", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dv", name = "Middle bar", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dv", name = "Middle bar", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mid")
@@ -953,7 +953,7 @@ s({trig = "([^%a])dv", name = "Middle bar", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])xm", name = "Maximum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "xm", name = "Maximum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -970,7 +970,7 @@ s({trig = "([^%a])xm", name = "Maximum", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mu", name = "Minimum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mu", name = "Minimum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -987,7 +987,7 @@ s({trig = "([^%a])mu", name = "Minimum", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nf", name = "Infimum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nf", name = "Infimum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1004,7 +1004,7 @@ s({trig = "([^%a])nf", name = "Infimum", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sr", name = "Supremum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sr", name = "Supremum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1021,7 +1021,7 @@ s({trig = "([^%a])sr", name = "Supremum", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])arg", name = "Argument", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "arg", name = "Argument", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arg")
@@ -1029,7 +1029,7 @@ s({trig = "([^%a])arg", name = "Argument", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])deg", name = "Degree", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "deg", name = "Degree", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\deg")
@@ -1037,7 +1037,7 @@ s({trig = "([^%a])deg", name = "Degree", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])det", name = "Determinant", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "det", name = "Determinant", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\det")
@@ -1045,7 +1045,7 @@ s({trig = "([^%a])det", name = "Determinant", snippetType = "autosnippet", regTr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dim", name = "Dimension", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dim", name = "Dimension", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\dim")
@@ -1053,7 +1053,7 @@ s({trig = "([^%a])dim", name = "Dimension", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])gc", name = "Greatest common divisor", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "gc", name = "Greatest common divisor", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\gcd")
@@ -1061,7 +1061,7 @@ s({trig = "([^%a])gc", name = "Greatest common divisor", snippetType = "autosnip
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hm", name = "Hom", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hm", name = "Hom", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\hom")
@@ -1069,7 +1069,7 @@ s({trig = "([^%a])hm", name = "Hom", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])kr", name = "Kernel", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "kr", name = "Kernel", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ker")
@@ -1077,7 +1077,7 @@ s({trig = "([^%a])kr", name = "Kernel", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lap", name = "Laplacian", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lap", name = "Laplacian", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\nabla^2 ")
@@ -1085,7 +1085,7 @@ s({trig = "([^%a])lap", name = "Laplacian", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])div", name = "Divergence", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "div", name = "Divergence", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -1102,7 +1102,7 @@ s({trig = "([^%a])div", name = "Divergence", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cur", name = "Curl", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cur", name = "Curl", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -1119,9 +1119,57 @@ s({trig = "([^%a])cur", name = "Curl", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
+s({trig = "ba", name = "Bra", snippetType = "autosnippet"},
+    {
+        c(1,
+            {
+                {
+                    t("\\bra{"), i(1), t("}")
+                },
+                {
+                    t("\\bra*{"), i(1), t("}")
+                }
+            }
+        )
+    },
+    {condition = in_mathzone}
+),
+
+s({trig = "kt", name = "Ket", snippetType = "autosnippet"},
+    {
+        c(1,
+            {
+                {
+                    t("\\ket{"), i(1), t("}")
+                },
+                {
+                    t("\\ket*{"), i(1), t("}")
+                }
+            }
+        )
+    },
+    {condition = in_mathzone}
+),
+
+s({trig = "bk", name = "Braket", snippetType = "autosnippet"},
+    {
+        c(1,
+            {
+                {
+                    t("\\braket{"), i(1), t("}{"), i(2), t("}")
+                },
+                {
+                    t("\\braket*{"), i(1), t("}{"), i(2), t("}")
+                }
+            }
+        )
+    },
+    {condition = in_mathzone}
+),
+
 -- Operators with limits
 
-s({trig = "([^%a])lm", name = "Limit", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lm", name = "Limit", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1138,7 +1186,7 @@ s({trig = "([^%a])lm", name = "Limit", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lif", name = "liminf", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lif", name = "liminf", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1155,7 +1203,7 @@ s({trig = "([^%a])lif", name = "liminf", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lsu", name = "limsup", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lsu", name = "limsup", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1172,7 +1220,7 @@ s({trig = "([^%a])lsu", name = "limsup", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lvf", name = "varliminf", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lvf", name = "varliminf", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1189,7 +1237,7 @@ s({trig = "([^%a])lvf", name = "varliminf", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lvu", name = "varlimsup", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lvu", name = "varlimsup", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1208,7 +1256,7 @@ s({trig = "([^%a])lvu", name = "varlimsup", snippetType = "autosnippet", regTrig
 
 -- Functions
 
-s({trig = "([^%a])fn", name = "Function domain and codomain", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "fn", name = "Function domain and codomain", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         i(1,"fun"), t(" : "), i(2,"dom"), t(" \\longrightarrow "), i(3,"cod")
@@ -1226,7 +1274,7 @@ s({trig = "fd", name = "Function definition"},
     }
 ),
 
-s({trig = "([^%a])sni", name = "sin", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sni", name = "sin", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sin")
@@ -1234,7 +1282,7 @@ s({trig = "([^%a])sni", name = "sin", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])co", name = "cos", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "co", name = "cos", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cos")
@@ -1242,7 +1290,7 @@ s({trig = "([^%a])co", name = "cos", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tn", name = "tan", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tn", name = "tan", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\tan")
@@ -1250,7 +1298,7 @@ s({trig = "([^%a])tn", name = "tan", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ot", name = "cot", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ot", name = "cot", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cot")
@@ -1258,7 +1306,7 @@ s({trig = "([^%a])ot", name = "cot", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sc", name = "sec", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sc", name = "sec", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sec")
@@ -1266,7 +1314,7 @@ s({trig = "([^%a])sc", name = "sec", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cc", name = "csc", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cc", name = "csc", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\csc")
@@ -1274,7 +1322,7 @@ s({trig = "([^%a])cc", name = "csc", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])asin", name = "arcsin", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "asin", name = "arcsin", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arcsin")
@@ -1282,7 +1330,7 @@ s({trig = "([^%a])asin", name = "arcsin", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])acos", name = "arccos", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "acos", name = "arccos", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arccos")
@@ -1290,7 +1338,7 @@ s({trig = "([^%a])acos", name = "arccos", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])atan", name = "arctan", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "atan", name = "arctan", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arctan")
@@ -1298,7 +1346,7 @@ s({trig = "([^%a])atan", name = "arctan", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])acot", name = "arccot", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "acot", name = "arccot", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arccot")
@@ -1306,7 +1354,7 @@ s({trig = "([^%a])acot", name = "arccot", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])asec", name = "arcsec", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "asec", name = "arcsec", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arcsec")
@@ -1314,7 +1362,7 @@ s({trig = "([^%a])asec", name = "arcsec", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])acc", name = "arccsc", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "acc", name = "arccsc", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arccsc")
@@ -1322,7 +1370,7 @@ s({trig = "([^%a])acc", name = "arccsc", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sinh", name = "sinh", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sinh", name = "sinh", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sinh")
@@ -1330,7 +1378,7 @@ s({trig = "([^%a])sinh", name = "sinh", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cosh", name = "cosh", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cosh", name = "cosh", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cosh")
@@ -1338,7 +1386,7 @@ s({trig = "([^%a])cosh", name = "cosh", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tanh", name = "tanh", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tanh", name = "tanh", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\tanh")
@@ -1346,7 +1394,7 @@ s({trig = "([^%a])tanh", name = "tanh", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])coth", name = "coth", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "coth", name = "coth", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\coth")
@@ -1354,7 +1402,7 @@ s({trig = "([^%a])coth", name = "coth", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sh", name = "sech", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sh", name = "sech", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sech")
@@ -1362,7 +1410,7 @@ s({trig = "([^%a])sh", name = "sech", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])csch", name = "csch", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "csch", name = "csch", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\csch")
@@ -1370,7 +1418,7 @@ s({trig = "([^%a])csch", name = "csch", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ahsin", name = "arcsinh", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ahsin", name = "arcsinh", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arcsinh")
@@ -1378,7 +1426,7 @@ s({trig = "([^%a])ahsin", name = "arcsinh", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ahcos", name = "arccosh", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ahcos", name = "arccosh", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arccosh")
@@ -1386,7 +1434,7 @@ s({trig = "([^%a])ahcos", name = "arccosh", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ahtan", name = "arctanh", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ahtan", name = "arctanh", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arctanh")
@@ -1394,7 +1442,7 @@ s({trig = "([^%a])ahtan", name = "arctanh", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ahcot", name = "arccoth", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ahcot", name = "arccoth", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arccoth")
@@ -1402,7 +1450,7 @@ s({trig = "([^%a])ahcot", name = "arccoth", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ahsec", name = "arcsech", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ahsec", name = "arcsech", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arcsech")
@@ -1410,7 +1458,7 @@ s({trig = "([^%a])ahsec", name = "arcsech", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ahcc", name = "arccsch", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ahcc", name = "arccsch", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\arccsch")
@@ -1418,7 +1466,7 @@ s({trig = "([^%a])ahcc", name = "arccsch", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])xp", name = "exp", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "xp", name = "exp", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\exp")
@@ -1426,7 +1474,7 @@ s({trig = "([^%a])xp", name = "exp", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ln", name = "ln", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ln", name = "ln", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ln")
@@ -1434,7 +1482,7 @@ s({trig = "([^%a])ln", name = "ln", snippetType = "autosnippet", regTrig = true,
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lg", name = "log", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lg", name = "log", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\log")
@@ -1444,7 +1492,7 @@ s({trig = "([^%a])lg", name = "log", snippetType = "autosnippet", regTrig = true
 
 -- Ellipsis
 
-s({trig = "([^%a])dd", name = "Lower dots", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dd", name = "Lower dots", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ldots")
@@ -1452,7 +1500,7 @@ s({trig = "([^%a])dd", name = "Lower dots", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cr", name = "Centered dots", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cr", name = "Centered dots", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cdots")
@@ -1460,7 +1508,7 @@ s({trig = "([^%a])cr", name = "Centered dots", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])vd", name = "Vertical dots", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "vd", name = "Vertical dots", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\vdots")
@@ -1468,7 +1516,7 @@ s({trig = "([^%a])vd", name = "Vertical dots", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])gd", name = "Diagonal dots", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "gd", name = "Diagonal dots", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ddots")
@@ -1476,7 +1524,7 @@ s({trig = "([^%a])gd", name = "Diagonal dots", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cln", name = "Colon", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cln", name = "Colon", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\colon")
@@ -1484,7 +1532,7 @@ s({trig = "([^%a])cln", name = "Colon", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sln", name = "Semicolon", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sln", name = "Semicolon", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t(";")
@@ -1494,7 +1542,7 @@ s({trig = "([^%a])sln", name = "Semicolon", snippetType = "autosnippet", regTrig
 
 -- Horizontal extensions
 
-s({trig = "([^%a])ovr", name = "Overline", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ovr", name = "Overline", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\overline{"), d(1,get_visual), t("}")
@@ -1502,7 +1550,7 @@ s({trig = "([^%a])ovr", name = "Overline", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])und", name = "Underline", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "und", name = "Underline", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\underline{"), d(1,get_visual), t("}")
@@ -1510,7 +1558,7 @@ s({trig = "([^%a])und", name = "Underline", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ovb", name = "Overbrace", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ovb", name = "Overbrace", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\overbrace{"), d(1,get_visual), t("}^{"), i(2,"top"), t("}")
@@ -1518,7 +1566,7 @@ s({trig = "([^%a])ovb", name = "Overbrace", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])unb", name = "Underbrace", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "unb", name = "Underbrace", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\underbrace{"), d(1,get_visual), t("}_{"), i(2,"bottom"), t("}")
@@ -1528,7 +1576,7 @@ s({trig = "([^%a])unb", name = "Underbrace", snippetType = "autosnippet", regTri
 
 -- Delimiters
 
-s({trig = "([^%a])dp", name = "Parenthesis", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dp", name = "Parenthesis", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\left( "), d(1,get_visual), t(" \\right)")
@@ -1536,7 +1584,7 @@ s({trig = "([^%a])dp", name = "Parenthesis", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ds", name = "Brackets", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ds", name = "Brackets", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\left[ "), d(1,get_visual), t(" \\right]")
@@ -1544,7 +1592,7 @@ s({trig = "([^%a])ds", name = "Brackets", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])bb", name = "Braces", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "bb", name = "Braces", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\{ "), d(1,get_visual), t(" \\}")
@@ -1552,7 +1600,7 @@ s({trig = "([^%a])bb", name = "Braces", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])db", name = "Extensible braces", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "db", name = "Extensible braces", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\left\\{ "), d(1,get_visual), t(" \\right\\}")
@@ -1560,7 +1608,7 @@ s({trig = "([^%a])db", name = "Extensible braces", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dk", name = "Angle brackets", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dk", name = "Angle brackets", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1577,7 +1625,7 @@ s({trig = "([^%a])dk", name = "Angle brackets", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])da", name = "Pipes", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "da", name = "Pipes", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1594,7 +1642,7 @@ s({trig = "([^%a])da", name = "Pipes", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dn", name = "Double pipes", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dn", name = "Double pipes", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1611,7 +1659,7 @@ s({trig = "([^%a])dn", name = "Double pipes", snippetType = "autosnippet", regTr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])big", name = "Big-d delimiters", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "big", name = "Big-d delimiters", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1636,7 +1684,7 @@ s({trig = "([^%a])big", name = "Big-d delimiters", snippetType = "autosnippet", 
 
 -- Spacing commands
 
-s({trig = "([^%a])thp", name = "Thin space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "thp", name = "Thin space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\,")
@@ -1644,7 +1692,7 @@ s({trig = "([^%a])thp", name = "Thin space", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])mp", name = "Medium space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "mdn", name = "Medium space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\:")
@@ -1652,7 +1700,7 @@ s({trig = "([^%a])mp", name = "Medium space", snippetType = "autosnippet", regTr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tkp", name = "Thick space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tkp", name = "Thick space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\;")
@@ -1660,7 +1708,7 @@ s({trig = "([^%a])tkp", name = "Thick space", snippetType = "autosnippet", regTr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])enp", name = "Enskip", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "enp", name = "Enskip", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\enskip")
@@ -1668,7 +1716,7 @@ s({trig = "([^%a])enp", name = "Enskip", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])qu", name = "Quad", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "qu", name = "Quad", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\quad")
@@ -1676,7 +1724,7 @@ s({trig = "([^%a])qu", name = "Quad", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])qq", name = "Double quad", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "qq", name = "Double quad", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\qquad")
@@ -1684,7 +1732,7 @@ s({trig = "([^%a])qq", name = "Double quad", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])thn", name = "Negative thin space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "thn", name = "Negative thin space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\!")
@@ -1692,7 +1740,7 @@ s({trig = "([^%a])thn", name = "Negative thin space", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])men", name = "Negative medium space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "men", name = "Negative medium space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\negmedspace")
@@ -1700,7 +1748,7 @@ s({trig = "([^%a])men", name = "Negative medium space", snippetType = "autosnipp
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])tkn", name = "Negative thick space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "tkn", name = "Negative thick space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\negthickspace")
@@ -1708,7 +1756,7 @@ s({trig = "([^%a])tkn", name = "Negative thick space", snippetType = "autosnippe
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hs", name = "Horizontal space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hs", name = "Horizontal space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\hspace{"), i(1,"..."), t("}")
@@ -1716,7 +1764,7 @@ s({trig = "([^%a])hs", name = "Horizontal space", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])vs", name = "Vertical space", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "vs", name = "Vertical space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\vspace{"), i(1,"..."), t("}")
@@ -1726,7 +1774,7 @@ s({trig = "([^%a])vs", name = "Vertical space", snippetType = "autosnippet", reg
 
 -- Greek alphabet
 
-s({trig = "([^%a])[.]a", name = "Alpha", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]a", name = "Alpha", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\alpha")
@@ -1734,7 +1782,7 @@ s({trig = "([^%a])[.]a", name = "Alpha", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]b", name = "Beta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]b", name = "Beta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\beta")
@@ -1742,7 +1790,7 @@ s({trig = "([^%a])[.]b", name = "Beta", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]c", name = "Chi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]c", name = "Chi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\chi")
@@ -1750,7 +1798,7 @@ s({trig = "([^%a])[.]c", name = "Chi", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]D", name = "Uppercase delta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]D", name = "Uppercase delta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Delta")
@@ -1758,7 +1806,7 @@ s({trig = "([^%a])[.]D", name = "Uppercase delta", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]d", name = "Lowercase delta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]d", name = "Lowercase delta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\delta")
@@ -1766,7 +1814,7 @@ s({trig = "([^%a])[.]d", name = "Lowercase delta", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]e", name = "Epsilon", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]e", name = "Epsilon", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1783,7 +1831,7 @@ s({trig = "([^%a])[.]e", name = "Epsilon", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]G", name = "Uppercase gamma", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]G", name = "Uppercase gamma", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Gamma")
@@ -1791,7 +1839,7 @@ s({trig = "([^%a])[.]G", name = "Uppercase gamma", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]g", name = "Lowercase gamma", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]g", name = "Lowercase gamma", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\gamma")
@@ -1799,7 +1847,7 @@ s({trig = "([^%a])[.]g", name = "Lowercase gamma", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]h", name = "Eta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]h", name = "Eta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\eta")
@@ -1807,7 +1855,7 @@ s({trig = "([^%a])[.]h", name = "Eta", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]i", name = "Iota", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]i", name = "Iota", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\iota")
@@ -1815,7 +1863,7 @@ s({trig = "([^%a])[.]i", name = "Iota", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]k", name = "Kappa", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]k", name = "Kappa", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\kappa")
@@ -1823,7 +1871,7 @@ s({trig = "([^%a])[.]k", name = "Kappa", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]L", name = "Uppercase lambda", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]L", name = "Uppercase lambda", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Lambda")
@@ -1831,7 +1879,7 @@ s({trig = "([^%a])[.]L", name = "Uppercase lambda", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]l", name = "Lowercase lambda", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]l", name = "Lowercase lambda", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\lambda")
@@ -1839,7 +1887,7 @@ s({trig = "([^%a])[.]l", name = "Lowercase lambda", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]m", name = "Mu", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]m", name = "Mu", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mu")
@@ -1847,7 +1895,7 @@ s({trig = "([^%a])[.]m", name = "Mu", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]n", name = "Nu", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]n", name = "Nu", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\nu")
@@ -1855,7 +1903,7 @@ s({trig = "([^%a])[.]n", name = "Nu", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]O", name = "Uppercase omega", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]O", name = "Uppercase omega", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Omega")
@@ -1863,7 +1911,7 @@ s({trig = "([^%a])[.]O", name = "Uppercase omega", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]o", name = "Lowercase omega", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]o", name = "Lowercase omega", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\omega")
@@ -1871,7 +1919,7 @@ s({trig = "([^%a])[.]o", name = "Lowercase omega", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]Ph", name = "Uppercase phi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]Ph", name = "Uppercase phi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Phi")
@@ -1879,7 +1927,7 @@ s({trig = "([^%a])[.]Ph", name = "Uppercase phi", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]ph", name = "Lowecase phi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]ph", name = "Lowecase phi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -1896,7 +1944,7 @@ s({trig = "([^%a])[.]ph", name = "Lowecase phi", snippetType = "autosnippet", re
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]Pi", name = "Uppercase pi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]Pi", name = "Uppercase pi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Pi")
@@ -1904,7 +1952,7 @@ s({trig = "([^%a])[.]Pi", name = "Uppercase pi", snippetType = "autosnippet", re
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]pi", name = "Lowercase pi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]pi", name = "Lowercase pi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\pi")
@@ -1912,7 +1960,7 @@ s({trig = "([^%a])[.]pi", name = "Lowercase pi", snippetType = "autosnippet", re
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]Ps", name = "Uppercase psi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]Ps", name = "Uppercase psi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Psi")
@@ -1920,7 +1968,7 @@ s({trig = "([^%a])[.]Ps", name = "Uppercase psi", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]ps", name = "Lowercase psi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]ps", name = "Lowercase psi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\psi")
@@ -1928,7 +1976,7 @@ s({trig = "([^%a])[.]ps", name = "Lowercase psi", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]r", name = "Rho", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]r", name = "Rho", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\rho")
@@ -1936,7 +1984,7 @@ s({trig = "([^%a])[.]r", name = "Rho", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]S", name = "Uppercase sigma", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]S", name = "Uppercase sigma", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Sigma")
@@ -1944,7 +1992,7 @@ s({trig = "([^%a])[.]S", name = "Uppercase sigma", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]s", name = "Lowercase sigma", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]s", name = "Lowercase sigma", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sigma")
@@ -1952,7 +2000,7 @@ s({trig = "([^%a])[.]s", name = "Lowercase sigma", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]ta", name = "Tau", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]ta", name = "Tau", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\tau")
@@ -1960,7 +2008,7 @@ s({trig = "([^%a])[.]ta", name = "Tau", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]Th", name = "Uppercase theta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]Th", name = "Uppercase theta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Theta")
@@ -1968,7 +2016,7 @@ s({trig = "([^%a])[.]Th", name = "Uppercase theta", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]th", name = "Lowercase theta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]th", name = "Lowercase theta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\theta")
@@ -1976,7 +2024,7 @@ s({trig = "([^%a])[.]th", name = "Lowercase theta", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]U", name = "Uppercase upsilon", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]U", name = "Uppercase upsilon", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Upsilon")
@@ -1984,7 +2032,7 @@ s({trig = "([^%a])[.]U", name = "Uppercase upsilon", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]u", name = "Lowecase upsilon", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]u", name = "Lowecase upsilon", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\upsilon")
@@ -1992,7 +2040,7 @@ s({trig = "([^%a])[.]u", name = "Lowecase upsilon", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]X", name = "Uppercase xi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]X", name = "Uppercase xi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\Xi")
@@ -2000,7 +2048,7 @@ s({trig = "([^%a])[.]X", name = "Uppercase xi", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]x", name = "Lowercase xi", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]x", name = "Lowercase xi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\xi")
@@ -2008,7 +2056,7 @@ s({trig = "([^%a])[.]x", name = "Lowercase xi", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])[.]z", name = "Zeta", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "[.]z", name = "Zeta", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\zeta")
@@ -2018,7 +2066,7 @@ s({trig = "([^%a])[.]z", name = "Zeta", snippetType = "autosnippet", regTrig = t
 
 -- Letter-shaped symbols
 
-s({trig = "([^%a])ha", name = "Aleph", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ha", name = "Aleph", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\aleph")
@@ -2026,7 +2074,7 @@ s({trig = "([^%a])ha", name = "Aleph", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hb", name = "Beth", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hb", name = "Beth", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\beth")
@@ -2034,7 +2082,7 @@ s({trig = "([^%a])hb", name = "Beth", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hd", name = "Daleth", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hd", name = "Daleth", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\daleth")
@@ -2042,7 +2090,7 @@ s({trig = "([^%a])hd", name = "Daleth", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hg", name = "Gimel", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hg", name = "Gimel", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\gimel")
@@ -2050,7 +2098,7 @@ s({trig = "([^%a])hg", name = "Gimel", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ll", name = "ell", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ll", name = "ell", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ell")
@@ -2058,7 +2106,7 @@ s({trig = "([^%a])ll", name = "ell", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])cm", name = "Set complement", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "cm", name = "Set complement", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\complement")
@@ -2066,7 +2114,7 @@ s({trig = "([^%a])cm", name = "Set complement", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hr", name = "hbar", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hr", name = "hbar", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\hbar")
@@ -2074,7 +2122,7 @@ s({trig = "([^%a])hr", name = "hbar", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hl", name = "hslash", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hl", name = "hslash", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\hslash")
@@ -2082,7 +2130,7 @@ s({trig = "([^%a])hl", name = "hslash", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])pt", name = "Partial", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "pt", name = "Partial", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\partial")
@@ -2092,7 +2140,7 @@ s({trig = "([^%a])pt", name = "Partial", snippetType = "autosnippet", regTrig = 
 
 -- Miscellaneous symbols
 
-s({trig = "([^%a])dl", name = "Dollar sign", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dl", name = "Dollar sign", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\$")
@@ -2100,7 +2148,7 @@ s({trig = "([^%a])dl", name = "Dollar sign", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])hh", name = "Numeral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "hh", name = "Numeral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\#")
@@ -2108,7 +2156,7 @@ s({trig = "([^%a])hh", name = "Numeral", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])fy", name = "Infinity", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "fy", name = "Infinity", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\infty")
@@ -2116,7 +2164,7 @@ s({trig = "([^%a])fy", name = "Infinity", snippetType = "autosnippet", regTrig =
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])pr", name = "Prime", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "pr", name = "Prime", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\prime")
@@ -2124,7 +2172,7 @@ s({trig = "([^%a])pr", name = "Prime", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])per", name = "Percentaje", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "per", name = "Percentaje", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\%")
@@ -2132,7 +2180,7 @@ s({trig = "([^%a])per", name = "Percentaje", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])amp", name = "Ampersand", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "amp", name = "Ampersand", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\&")
@@ -2140,7 +2188,7 @@ s({trig = "([^%a])amp", name = "Ampersand", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ang", name = "Angle", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ang", name = "Angle", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\angle")
@@ -2148,7 +2196,7 @@ s({trig = "([^%a])ang", name = "Angle", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nb", name = "Nabla", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nb", name = "Nabla", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\nabla")
@@ -2156,7 +2204,7 @@ s({trig = "([^%a])nb", name = "Nabla", snippetType = "autosnippet", regTrig = tr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ch", name = "Section symbol", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ch", name = "Section symbol", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\S")
@@ -2166,7 +2214,7 @@ s({trig = "([^%a])ch", name = "Section symbol", snippetType = "autosnippet", reg
 
 -- Accents
 
-s({trig = "([^%a])dr", name = "Dot accent", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dr", name = "Dot accent", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -2189,7 +2237,7 @@ s({trig = "([^%a])dr", name = "Dot accent", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ht", name = "Hat", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ht", name = "Hat", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2206,7 +2254,7 @@ s({trig = "([^%a])ht", name = "Hat", snippetType = "autosnippet", regTrig = true
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])rng", name = "Math ring", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "rng", name = "Math ring", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathring{"), v(1,"..."), t("}")
@@ -2214,7 +2262,7 @@ s({trig = "([^%a])rng", name = "Math ring", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])til", name = "Tilde", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "til", name = "Tilde", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2231,7 +2279,7 @@ s({trig = "([^%a])til", name = "Tilde", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])vv", name = "Vector", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "vv", name = "Vector", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2250,7 +2298,7 @@ s({trig = "([^%a])vv", name = "Vector", snippetType = "autosnippet", regTrig = t
 
 -- Logic
 
-s({trig = "([^%a])fa", name = "For all", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "fa", name = "For all", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\forall")
@@ -2258,7 +2306,7 @@ s({trig = "([^%a])fa", name = "For all", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ex", name = "Exists", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ex", name = "Exists", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\exists")
@@ -2266,7 +2314,7 @@ s({trig = "([^%a])ex", name = "Exists", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nx", name = "Not exist", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nx", name = "Not exist", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\nexists")
@@ -2274,7 +2322,7 @@ s({trig = "([^%a])nx", name = "Not exist", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lt", name = "Logic negation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lt", name = "Logic negation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\lnot")
@@ -2282,7 +2330,7 @@ s({trig = "([^%a])lt", name = "Logic negation", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lan", name = "Logic and", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lan", name = "Logic and", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\land")
@@ -2290,7 +2338,7 @@ s({trig = "([^%a])lan", name = "Logic and", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lor", name = "Logic or", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lor", name = "Logic or", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\lor")
@@ -2298,7 +2346,7 @@ s({trig = "([^%a])lor", name = "Logic or", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ip", name = "Implies", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ip", name = "Implies", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\implies")
@@ -2306,7 +2354,7 @@ s({trig = "([^%a])ip", name = "Implies", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ib", name = "Implied by", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ib", name = "Implied by", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\impliedby")
@@ -2314,7 +2362,7 @@ s({trig = "([^%a])ib", name = "Implied by", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])iff", name = "If and only if", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "iff", name = "If and only if", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\iff")
@@ -2324,7 +2372,7 @@ s({trig = "([^%a])iff", name = "If and only if", snippetType = "autosnippet", re
 
 -- Sets and inclusion
 
-s({trig = "([^%a])in", name = "Belongs to", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "in", name = "Belongs to", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\in")
@@ -2332,7 +2380,7 @@ s({trig = "([^%a])in", name = "Belongs to", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ntn", name = "Not in", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ntn", name = "Not in", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\notin")
@@ -2340,7 +2388,7 @@ s({trig = "([^%a])ntn", name = "Not in", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])na", name = "Owns", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "na", name = "Owns", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\ni")
@@ -2348,7 +2396,7 @@ s({trig = "([^%a])na", name = "Owns", snippetType = "autosnippet", regTrig = tru
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])vc", name = "Empty set", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "vc", name = "Empty set", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2365,7 +2413,7 @@ s({trig = "([^%a])vc", name = "Empty set", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nun", name = "Union", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nun", name = "Union", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cup")
@@ -2373,7 +2421,7 @@ s({trig = "([^%a])nun", name = "Union", snippetType = "autosnippet", regTrig = t
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])bun", name = "Big union", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "bun", name = "Big union", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigcup")
@@ -2381,7 +2429,7 @@ s({trig = "([^%a])bun", name = "Big union", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sun", name = "Big subscript union", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sun", name = "Big subscript union", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigcup_{"), i(1), t("}")
@@ -2389,7 +2437,7 @@ s({trig = "([^%a])sun", name = "Big subscript union", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dun", name = "Big definite union", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dun", name = "Big definite union", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigcup_{"), i(1), t("}^{"), i(2), t("}")
@@ -2397,7 +2445,7 @@ s({trig = "([^%a])dun", name = "Big definite union", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nit", name = "Intersection", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nit", name = "Intersection", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cap")
@@ -2405,7 +2453,7 @@ s({trig = "([^%a])nit", name = "Intersection", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])bit", name = "Big intersection", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "bit", name = "Big intersection", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigcap")
@@ -2413,7 +2461,7 @@ s({trig = "([^%a])bit", name = "Big intersection", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sit", name = "Big subscript intersection", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sit", name = "Big subscript intersection", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigcap_{"), i(1), t("}")
@@ -2421,7 +2469,7 @@ s({trig = "([^%a])sit", name = "Big subscript intersection", snippetType = "auto
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])dit", name = "Big definite intersection", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "dit", name = "Big definite intersection", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigcap_{"), i(1), t("}^{"), i(2), t("}")
@@ -2429,7 +2477,7 @@ s({trig = "([^%a])dit", name = "Big definite intersection", snippetType = "autos
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sf", name = "Set difference", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sf", name = "Set difference", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\setminus")
@@ -2437,7 +2485,7 @@ s({trig = "([^%a])sf", name = "Set difference", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sbs", name = "Subset", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sbs", name = "Subset", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\subset")
@@ -2445,7 +2493,7 @@ s({trig = "([^%a])sbs", name = "Subset", snippetType = "autosnippet", regTrig = 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sbq", name = "Subset or equals", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sbq", name = "Subset or equals", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2462,7 +2510,7 @@ s({trig = "([^%a])sbq", name = "Subset or equals", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sps", name = "Contains", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sps", name = "Contains", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\subset")
@@ -2470,7 +2518,7 @@ s({trig = "([^%a])sps", name = "Contains", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])spq", name = "Contains or equals", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "spq", name = "Contains or equals", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2487,7 +2535,7 @@ s({trig = "([^%a])spq", name = "Contains or equals", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])setd", name = "Dots set", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "setd", name = "Dots set", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\{ "), i(1), t(" \\std "), i(2), t(" \\}")
@@ -2495,7 +2543,7 @@ s({trig = "([^%a])setd", name = "Dots set", snippetType = "autosnippet", regTrig
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])setb", name = "Bar set", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "setb", name = "Bar set", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\{ "), i(1), t(" \\mid "), i(2), t(" \\}")
@@ -2505,7 +2553,7 @@ s({trig = "([^%a])setb", name = "Bar set", snippetType = "autosnippet", regTrig 
 
 -- Arrows
 
-s({trig = "([^%a])rar", name = "Long right arrow", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "rar", name = "Long right arrow", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\longrightarrow")
@@ -2513,7 +2561,7 @@ s({trig = "([^%a])rar", name = "Long right arrow", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])lar", name = "Long left arrow", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "lar", name = "Long left arrow", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\longleftarrow")
@@ -2521,7 +2569,7 @@ s({trig = "([^%a])lar", name = "Long left arrow", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])to", name = "Long maps to", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "to", name = "Long maps to", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\longmapsto")
@@ -2531,7 +2579,7 @@ s({trig = "([^%a])to", name = "Long maps to", snippetType = "autosnippet", regTr
 
 -- Sums
 
-s({trig = "([^%a])ssm", name = "Subscript sum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ssm", name = "Subscript sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sum_{"), i(1), t("}")
@@ -2539,7 +2587,7 @@ s({trig = "([^%a])ssm", name = "Subscript sum", snippetType = "autosnippet", reg
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nsm", name = "Definite sum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nsm", name = "Definite sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sum_{"), i(1), t("}^{"), i(2), t("}")
@@ -2547,7 +2595,7 @@ s({trig = "([^%a])nsm", name = "Definite sum", snippetType = "autosnippet", regT
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])sosm", name = "Subscript o-sum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "sosm", name = "Subscript o-sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigoplus_{"), i(1), t("}")
@@ -2555,7 +2603,7 @@ s({trig = "([^%a])sosm", name = "Subscript o-sum", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nosm", name = "Definite o-sum", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nosm", name = "Definite o-sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigoplus_{"), i(1), t("}^{"), i(2), t("}")
@@ -2565,7 +2613,7 @@ s({trig = "([^%a])nosm", name = "Definite o-sum", snippetType = "autosnippet", r
 
 -- Products
 
-s({trig = "([^%a])suc", name = "Subscript product", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "suc", name = "Subscript product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\prod_{"), i(1), t("}")
@@ -2573,7 +2621,7 @@ s({trig = "([^%a])suc", name = "Subscript product", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nuc", name = "Definite product", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nuc", name = "Definite product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\prod_{"), i(1), t("}^{"), i(2), t("}")
@@ -2581,7 +2629,7 @@ s({trig = "([^%a])nuc", name = "Definite product", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])souc", name = "Subscript o-product", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "souc", name = "Subscript o-product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigotimes_{"), i(1), t("}")
@@ -2589,7 +2637,7 @@ s({trig = "([^%a])souc", name = "Subscript o-product", snippetType = "autosnippe
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])nouc", name = "Definite o-product", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "nouc", name = "Definite o-product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigotimes{"), i(1), t("}^{"), i(2), t("}")
@@ -2599,7 +2647,7 @@ s({trig = "([^%a])nouc", name = "Definite o-product", snippetType = "autosnippet
 
 -- Derivatives
 
-s({trig = "([^%a])df", name = "Differential", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "df", name = "Differential", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\dx")
@@ -2607,7 +2655,7 @@ s({trig = "([^%a])df", name = "Differential", snippetType = "autosnippet", regTr
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])der", name = "Derivative", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "der", name = "Derivative", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -2624,7 +2672,7 @@ s({trig = "([^%a])der", name = "Derivative", snippetType = "autosnippet", regTri
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ndr", name = "n-th derivative", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ndr", name = "n-th derivative", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -2641,7 +2689,7 @@ s({trig = "([^%a])ndr", name = "n-th derivative", snippetType = "autosnippet", r
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])pdr", name = "Partial derivative", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "pdr", name = "Partial derivative", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -2658,7 +2706,7 @@ s({trig = "([^%a])pdr", name = "Partial derivative", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])npd", name = "n-th partial derivative", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "npd", name = "n-th partial derivative", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		c(1,
@@ -2675,7 +2723,7 @@ s({trig = "([^%a])npd", name = "n-th partial derivative", snippetType = "autosni
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])evl", name = "Derivative evaluation", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "evl", name = "Derivative evaluation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\evl{"), i(1), t("}")
@@ -2685,7 +2733,7 @@ s({trig = "([^%a])evl", name = "Derivative evaluation", snippetType = "autosnipp
 
 -- Integrals
 
-s({trig = "([^%a])itn", name = "Integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itn", name = "Integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2702,7 +2750,7 @@ s({trig = "([^%a])itn", name = "Integral", snippetType = "autosnippet", regTrig 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])its", name = "Subscript integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "its", name = "Subscript integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2719,7 +2767,7 @@ s({trig = "([^%a])its", name = "Subscript integral", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itd", name = "Definite integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itd", name = "Definite integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\int_{"), i(1), t("}^{"), i(2), t("}")
@@ -2727,7 +2775,7 @@ s({trig = "([^%a])itd", name = "Definite integral", snippetType = "autosnippet",
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itbn", name = "Double integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itbn", name = "Double integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2744,7 +2792,7 @@ s({trig = "([^%a])itbn", name = "Double integral", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itbs", name = "Double integral subscript", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itbs", name = "Double integral subscript", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2761,7 +2809,7 @@ s({trig = "([^%a])itbs", name = "Double integral subscript", snippetType = "auto
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])ittn", name = "Triple integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "ittn", name = "Triple integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2778,7 +2826,7 @@ s({trig = "([^%a])ittn", name = "Triple integral", snippetType = "autosnippet", 
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itts", name = "Triple integral subscript", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itts", name = "Triple integral subscript", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2795,7 +2843,7 @@ s({trig = "([^%a])itts", name = "Triple integral subscript", snippetType = "auto
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itqn", name = "Quadruple integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itqn", name = "Quadruple integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2812,7 +2860,7 @@ s({trig = "([^%a])itqn", name = "Quadruple integral", snippetType = "autosnippet
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itqs", name = "Quadruple integral subscript", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itqs", name = "Quadruple integral subscript", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2829,7 +2877,7 @@ s({trig = "([^%a])itqs", name = "Quadruple integral subscript", snippetType = "a
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itmn", name = "Multiple integral", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itmn", name = "Multiple integral", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		t("\\idotsint")
@@ -2837,7 +2885,7 @@ s({trig = "([^%a])itmn", name = "Multiple integral", snippetType = "autosnippet"
     {condition = in_mathzone}
 ),
 
-s({trig = "([^%a])itms", name = "Multiple integral subscript", snippetType = "autosnippet", regTrig = true, wordTrig = false},
+s({trig = "itms", name = "Multiple integral subscript", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
 		t("\\idotsint_{"), i(1), t("}")

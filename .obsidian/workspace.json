@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "a52c5ea40b1543db",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d5566937585732f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e6c8de3ee3f9be8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ef25e57c2510a2de",
+    "type": "split",
+    "children": [
+      {
+        "id": "185a5a1250e10542",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b381f7c63446cd5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "764c63c909584afa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e8924f5c5c3a65b9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "01037d152c1736c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "58bf6f1fd384fc81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf385a8eec7eac5f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6eaf7548db1736a2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "25cb3e615dbc9018",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fe44c11df5f4778e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5e6c8de3ee3f9be8",
+  "lastOpenFiles": [
+    "assets/sch.gif",
+    "assets/matrix.gif",
+    "assets/hodge.gif",
+    "assets/gauss.gif",
+    "assets/fatou.gif",
+    "assets/doc.gif",
+    "assets/chudnovsky.gif",
+    "assets/it.gif",
+    "assets/matrix_130.gif",
+    "assets/hodge_130.gif",
+    "assets/fatou_130.gif",
+    "assets",
+    "doc/lu2410246d0bk2.tmp",
+    "doc/lu2410246d0bjy.tmp",
+    "doc/lu2410246d0bjw.tmp",
+    "doc/lu2410246d0bjs.tmp",
+    "doc/lu2410246d0bir.tmp",
+    "doc/lu2410246d0bin.tmp",
+    "doc/lu2410246d0bhl.tmp",
+    "doc/lu2410246d0bel.tmp",
+    "doc/lu2410246d0b5r.tmp"
+  ]
+}
