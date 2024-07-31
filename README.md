@@ -31,4 +31,4 @@ sudo chmod +x install.sh
 ./install.sh
 ```
 **Warning**: This script will override any file inside `$HOME/LuaSnip/` named `bib.lua` and all the files inside `$HOME/LuaSnip/tex/` named `bibtex.lua`, `floats.lua`, `fonts.lua`, `formatting.lua`, `math.lua`, `structure.lua` or `templates.lua`.
-**Warning 2*: This installation method assumes that your snippets live in the directory `$HOME/.config/nvim/LuaSnip/`, if not simply copy the contents of `snippets/` to the appropiate place.
+**Warning 2**: This installation method assumes that your snippets live in the directory `$HOME/.config/nvim/LuaSnip/`, if not simply copy the contents of `snippets/` to the appropiate place.
