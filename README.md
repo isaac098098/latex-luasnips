@@ -47,34 +47,34 @@ sudo chmod +x install.sh
 
 ### Hodge conjecture
 
-![Hodge conjecture](hodge.gif)
+![Hodge conjecture](https://github.com/isaac098098/latex-luasnips/blob/main/assets/hodge.gif)
 
 ### Fatou's lemma
 
-![Fatou's lemma](fatou.gif)
+![Fatou's lemma](https://github.com/isaac098098/latex-luasnips/blob/main/assets/fatou.gif)
 
 ### Gauss divergence theorem
 
-![Gauss divergence theorem](gauss.gif)
+![Gauss divergence theorem](https://github.com/isaac098098/latex-luasnips/blob/main/assets/gauss.gif)
 
 ### Matrices (due to [evesdropper](https://github.com/evesdropper/luasnip-latex-snippets.nvim))
 
-![Matrices](matrix.gif)
+![Matrices](https://github.com/isaac098098/latex-luasnips/blob/main/assets/matrix.gif)
 
 ### Chudnovsky algorithm
 
-![Chudnovsky algorithm](chudnovsky.gif)
+![Chudnovsky algorithm](https://github.com/isaac098098/latex-luasnips/blob/main/assets/chudnovsky.gif)
 
 ### Schrödinger equation
 
-![# Schrödinger equation](sch.gif)
+![# Schrödinger equation](https://github.com/isaac098098/latex-luasnips/blob/main/assets/sch.gif)
 
 ### Visual placeholder (example from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/intro/))
 
-![Visual placeholder](it.gif)
+![Visual placeholder](https://github.com/isaac098098/latex-luasnips/blob/main/assets/it.gif)
 
 ### From scratch document
 
-![From scratch document](doc.gif)
+![From scratch document](https://github.com/isaac098098/latex-luasnips/blob/main/assets/doc.gif)
 
 </details>
