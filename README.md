@@ -15,7 +15,6 @@ All of these snippets have detailed documentation specifying their name, trigger
 - Some snippets have more than two commands associated with them, this means that you can choose between both, that is, they're choice nodes. Generally you cycle through them using a shortcut, in my case it's `C-j` to go to the next option and `C-k` to go back. If you don't know how to specify this in your config file, you can consult the ChoiceNode section in [L3MON4D3](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md). In my init.vim:
 
 ```
-" Cycle forward through choice nodes
 imap <silent><expr> <C-j> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-j>'
 smap <silent><expr> <C-j> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-j>'
 imap <silent><expr> <C-k> luasnip#choice_active() ? '<Plug>luasnip-prev-choice' : '<C-k>'
