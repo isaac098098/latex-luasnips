@@ -10,7 +10,7 @@ This repository contains some useful LaTeX snippets for the [LuaSnips](https://g
 
 All of these snippets have detailed documentation specifying their name, trigger, whether it is automatic, visual, and what LaTeX packages it needs (if any). You can find a pdf file with this documentation in the doc folder. Some general tips and observations for using these snippets are as follows:
 
-- A few snippets have a `*` in the package field, this means that the code inserted by the snippet needs a custom command (macro) defined in the preamble, these definitions can be found at the end of the documentation file in the `Preamble macros` section. If this field has both a package name and a *, it means it needs both, for example, `amsmath\*` means that the command inserted requires the `amsmath` package and a macro.
+- A few snippets have a `*` in the package field, this means that the code inserted by the snippet needs a custom command (macro) defined in the preamble, these definitions can be found at the end of the documentation file in the `Preamble macros` section. If this field has both a package name and a *, it means it needs both, for example, `amsmath*` means that the command inserted requires the `amsmath` package and a macro.
 
 - Some snippets have more than two commands associated with them, this means that you can choose between both, that is, they're choice nodes. Generally you cycle through them using a shortcut, in my case it's C-j to go to the next option and C-k to go back. If you don't know how to specify this in your config file you can consult the ChoiceNode section in [L3MON4D3](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md)
 
