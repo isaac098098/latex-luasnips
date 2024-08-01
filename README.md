@@ -79,3 +79,7 @@ The text is first selected using the visual mode with `v`, or `V` for entire lin
 ![From scratch document](https://github.com/isaac098098/latex-luasnips-assets/blob/main/gifs/doc.gif)
 
 </details>
+
+# Anki
+
+I made an Anki deck for this snippets, separated on subdecks in the index sectioning fashion, so you can practice those you want. The biggest subdeck is the `math` deck, so I recomend using that more frequently. The card limit I use is 30 card per day, given that the answer are only 2, 3 or 4 characters long.
