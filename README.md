@@ -1,6 +1,6 @@
 # latex-luasnips
 
-This repository contains some useful LaTeX snippets for the [LuaSnips](https://github.com/L3MON4D3/LuaSnip) engine, most made by me and some collected from other repositories, specifically, the great snippets for the `case` and `matrix` mathematical environments made by [evesdropper](https://github.com/evesdropper/luasnip-latex-snippets.nvim) and the indispensable `get_visual` function for snippets with visual placeholders, taken from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/luasnip/). These snippets depend on [vimtex](https://github.com/lervag/vimtex) for math context.
+This repository contains some useful LaTeX snippets for the [LuaSnip](https://github.com/L3MON4D3/LuaSnip) engine, most made by me and some collected from other repositories, specifically, the great snippets for the `case` and `matrix` mathematical environments made by [evesdropper](https://github.com/evesdropper/luasnip-latex-snippets.nvim) and the indispensable `get_visual` function for snippets with visual placeholders, taken from [ejmastnak](https://ejmastnak.com/tutorials/vim-latex/luasnip/). These snippets depend on [vimtex](https://github.com/lervag/vimtex) for math context.
 
 # What are snippets? What is LaTeX?
 
@@ -82,4 +82,4 @@ The text is first selected using the visual mode with `v`, or `V` for entire lin
 
 # Anki
 
-I made an Anki deck for this snippets, separated on subdecks in the index sectioning fashion, so you can practice those you want. The biggest subdeck is the `math` deck, so I recomend using that more frequently. The card limit I use is 30 card per day, given that the answer are only 2, 3 or 4 characters long.
+If you want to increase your writing speed with these snippets, you can start memorizing them, this will help you tremendously, especially the math ones. For this I made an Anki deck of cards, in which you have to write the corresponding snippet given a command or formula. It contains the subdecks `bib`, `bibtex`, `floats`, `fonts`, `formatting`, `math` and `structures`, although as I said, the most convenient to study is `math`. You can find it as `LaTeX LuaSnips.apkg` in the `anki` folder. Don't worry, this deck doesn't use Anki's MathJax to display formulas, it just contains images, so you can use it on any computer without configuring anything. I recommend setting the **New cards/day** to a high number in this deck, for it is not difficult to memorize the snippets since they only consist of strings of 2, 3 or 4 characters. I also recommend setting **New card gather order** to **Random cards** in the deck options. If you want to leave the deck as new, simply delete it and import it again. Of course all your statistics will be lost.
