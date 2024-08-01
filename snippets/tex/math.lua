@@ -166,7 +166,7 @@ s({trig = "mf", name = "Euler Fraktur math font", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "ma", name = "Blackboard bold math font", snippetType = "autosnippet"},
+s({trig = "mk", name = "Blackboard bold math font", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\mathbb{"), d(1,get_visual), t("}")
@@ -381,7 +381,8 @@ s({trig = "tag", name = "Equation tag", snippetType = "autosnippet"},
                 }
             }
         )
-    }
+    },
+    {condition = in_mathzone}
 ),
 
 s({trig = "teq", name = "Last number equation", snippetType = "autosnippet"},
@@ -404,7 +405,7 @@ s({trig = "([bBpvV])(%d+)x(%d+)", name = "New matrix", snippetType = "autosnippe
 ),
 
 
-s({trig = "([bBpvV])(%d+),(%d+)", name = "New homogeneous matrix", snippetType = "autosnippet", regTrig = true},
+s({trig = "([bBpvV])(%d+)h(%d+)", name = "New homogeneous matrix", snippetType = "autosnippet", regTrig = true},
     {
 		t("\\begin{"), f(function(_, snip) return snip.captures[1] .. "matrix" end), t("}"),
 		t({"",""}), d(1,generate_hom_matrix),
@@ -657,10 +658,10 @@ s({trig = "sbg", name = "Left triangle", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\vartriangleleft")
+                    i(1,"\\vartriangleleft")
                 },
                 {
-                    t("\\ntriangleleft")
+                    i(1,"\\ntriangleleft")
                 }
             }
         )
@@ -674,10 +675,10 @@ s({trig = "sgc", name = "Right triangle", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\vartriangleright")
+                    i(1,"\\vartriangleright")
                 },
                 {
-                    t("\\ntriangleright")
+                    i(1,"\\ntriangleright")
                 }
             }
         )
@@ -959,7 +960,7 @@ s({trig = "xm", name = "Maximum", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\max")
+                    i(1,"\\max")
                 },
                 {
                     t("\\max_{"), i(1,"..."), t("}")
@@ -976,7 +977,7 @@ s({trig = "mu", name = "Minimum", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\min")
+                    i(1,"\\min")
                 },
                 {
                     t("\\min_{"), i(1,"..."), t("}")
@@ -993,7 +994,7 @@ s({trig = "nf", name = "Infimum", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\inf")
+                    i(1,"\\inf")
                 },
                 {
                     t("\\inf_{"), i(1,"..."), t("}")
@@ -1010,7 +1011,7 @@ s({trig = "sr", name = "Supremum", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\sup")
+                    i(1,"\\sup")
                 },
                 {
                     t("\\sup_{"), i(1,"..."), t("}")
@@ -1410,7 +1411,7 @@ s({trig = "sh", name = "sech", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "csch", name = "csch", snippetType = "autosnippet"},
+s({trig = "hcc", name = "csch", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\csch")
@@ -2510,15 +2511,15 @@ s({trig = "sbq", name = "Subset or equals", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "sps", name = "Contains", snippetType = "autosnippet"},
+s({trig = "sus", name = "Contains", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\subset")
+        t("\\supset")
     },
     {condition = in_mathzone}
 ),
 
-s({trig = "spq", name = "Contains or equals", snippetType = "autosnippet"},
+s({trig = "suq", name = "Contains or equals", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         c(1,
@@ -2579,7 +2580,7 @@ s({trig = "to", name = "Long maps to", snippetType = "autosnippet"},
 
 -- Sums
 
-s({trig = "ssm", name = "Subscript sum", snippetType = "autosnippet"},
+s({trig = "sm", name = "Subscript sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sum_{"), i(1), t("}")
@@ -2587,7 +2588,7 @@ s({trig = "ssm", name = "Subscript sum", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "nsm", name = "Definite sum", snippetType = "autosnippet"},
+s({trig = "ss", name = "Definite sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sum_{"), i(1), t("}^{"), i(2), t("}")
@@ -2595,7 +2596,7 @@ s({trig = "nsm", name = "Definite sum", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "sosm", name = "Subscript o-sum", snippetType = "autosnippet"},
+s({trig = "sos", name = "Subscript o-sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigoplus_{"), i(1), t("}")
@@ -2603,7 +2604,7 @@ s({trig = "sosm", name = "Subscript o-sum", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "nosm", name = "Definite o-sum", snippetType = "autosnippet"},
+s({trig = "nos", name = "Definite o-sum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigoplus_{"), i(1), t("}^{"), i(2), t("}")
@@ -2613,7 +2614,7 @@ s({trig = "nosm", name = "Definite o-sum", snippetType = "autosnippet"},
 
 -- Products
 
-s({trig = "suc", name = "Subscript product", snippetType = "autosnippet"},
+s({trig = "sp", name = "Subscript product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\prod_{"), i(1), t("}")
@@ -2621,7 +2622,7 @@ s({trig = "suc", name = "Subscript product", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "nuc", name = "Definite product", snippetType = "autosnippet"},
+s({trig = "pp", name = "Definite product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\prod_{"), i(1), t("}^{"), i(2), t("}")
@@ -2629,7 +2630,7 @@ s({trig = "nuc", name = "Definite product", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "souc", name = "Subscript o-product", snippetType = "autosnippet"},
+s({trig = "sop", name = "Subscript o-product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\bigotimes_{"), i(1), t("}")
@@ -2637,10 +2638,10 @@ s({trig = "souc", name = "Subscript o-product", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "nouc", name = "Definite o-product", snippetType = "autosnippet"},
+s({trig = "nop", name = "Definite o-product", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\bigotimes{"), i(1), t("}^{"), i(2), t("}")
+        t("\\bigotimes_{"), i(1), t("}^{"), i(2), t("}")
     },
     {condition = in_mathzone}
 ),
