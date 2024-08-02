@@ -33,7 +33,7 @@ s({trig = "hyp", name = "Hyphenate text correctly"},
     }
 ),
 
-s({trig = "bck", name = "Redefine \\\\"},
+s({trig = "bck", name = "Redefine \\\\ last column"},
     {
         t("\\arraybackslash")
     }
