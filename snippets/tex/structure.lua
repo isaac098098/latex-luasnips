@@ -1,0 +1,646 @@
+-- Visual placeholder
+-- taken from https://ejmastnak.com/
+
+local get_visual = function(args, parent, default_text)
+  if (#parent.snippet.env.LS_SELECT_RAW > 0) then
+    return sn(nil, i(1,parent.snippet.env.LS_SELECT_RAW))
+  else  -- If LS_SELECT_RAW is empty, return a blank insert node
+    return sn(nil, i(1,default_text))
+  end
+end
+
+local function v(pos, default_text)
+  return d(pos, function(args, parent) return get_visual(args, parent, default_text) end)
+end
+
+return {
+
+-- Document preamble
+
+s({trig = "doc", name = "Document class"},
+    {
+		c(1,
+		    {
+		        {
+        			t("\\documentclass{"), i(1,"document-class"), t("}")
+		        },
+		        {
+        			t("\\documentclass["), i(1,"class-options"), t("]{"), i(2,"document-class"), t("}")
+		        }
+		    }
+		)
+    }
+),
+
+s({trig = "pk", name = "Use package"},
+    {
+        c(1,
+            {
+                {
+                    t("\\usepackage{"), i(1,"package-name"), t("}")
+                },
+                {
+                    t("\\usepackage["), i(1,"package-options"), t("]{"), i(2,"package-name"), t("}")
+                }
+            }
+        )
+    }
+),
+
+s({trig = "tl", name = "Title"},
+    {
+        t("\\title{"), i(1,"..."), t("}")
+    }
+),
+
+s({trig = "dat", name = "Date"},
+    {
+        t("\\date{"), i(1,"..."), t("}")
+    }
+),
+
+s({trig = "aut", name = "Author"},
+    {
+        t("\\author{"), i(1,"..."), t("}")
+    }
+),
+
+s({trig = "td", name = "Today's date"},
+    {
+		t("\\today")
+    }
+),
+
+s({trig = "bd", name = "Begin document"},
+    {
+        t("\\begin{document}"),
+		t({"",""}),
+		t({"",""}), i(1),
+		t({"",""}),
+		t({"",""}), t("\\end{document}")
+    }
+),
+
+-- Sectioning
+
+s({trig = "scn", name = "Section"},
+    {
+        c(1,
+            {
+                {
+                    t("\\section{"), v(1,"title"), t("}")
+                },
+                {
+                    t("\\section*{"), v(1,"title"), t("}")
+                },
+				{
+					t("\\section["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "sbn", name = "Subection"},
+    {
+        c(1,
+            {
+                {
+                    t("\\subsection{"), v(1,"title"), t("}")
+                },
+                {
+                    t("\\subsection*{"), v(1,"title"), t("}")
+                },
+				{
+					t("\\subsection["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "ssn", name = "Subsubection"},
+    {
+        c(1,
+            {
+                {
+                    t("\\subsubsection{"), v(1,"title"), t("}")
+                },
+                {
+                    t("\\subsubsection*{"), v(1,"title"), t("}")
+                },
+				{
+					t("\\subsubsection["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "chr", name = "Chapter"},
+    {
+        c(1,
+            {
+                {
+                    t("\\chapter{"), v(1,"title"), t("}")
+                },
+                {
+                    t("\\chapter*{"), v(1,"title"), t("}")
+                },
+				{
+					t("\\chapter["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "prt", name = "Part"},
+    {
+        c(1,
+            {
+                {
+                    t("\\part{"), i(1,"title"), t("}")
+                },
+                {
+                    t("\\part*{"), i(1,"title"), t("}")
+                },
+				{
+					t("\\part["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "par", name = "Paragraph"},
+    {
+        c(1,
+            {
+                {
+                    t("\\paragraph{"), i(1,"title"), t("}")
+                },
+                {
+                    t("\\paragraph*{"), i(1,"title"), t("}")
+                },
+				{
+					t("\\paragraph["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "sbp", name = "Subaragraph"},
+    {
+        c(1,
+            {
+                {
+                    t("\\subparagraph{"), i(1,"title"), t("}")
+                },
+                {
+                    t("\\subparagraph*{"), i(1,"title"), t("}")
+                },
+				{
+					t("\\subparagraph["), i(1,"toc-entry"), t("]{"), v(2,"title"), t("}")
+				}
+            }
+        )
+    }
+),
+
+s({trig = "phs", name = "Hyperref jump to correct page"},
+    {
+        t("\\phantomsection")
+    }
+),
+
+s({trig = "add", name = "Add entry to list"},
+    {
+        t("\\addcontentsline{"), i(1,"file"), t("}{"), i(2,"sec-unit"), t("}{"), i(3,"list-entry"), t("}")
+    }
+),
+
+s({trig = "mkb", name = "Headers in twoside mode"},
+    {
+        t("\\markboth{"), i(1,"left"), t("}{"), i(2,"right"), t("}")
+    }
+),
+
+s({trig = "mkt", name = "Maketitle"},
+    {
+        t("\\maketitle")
+    }
+),
+
+s({trig = "toc", name = "Table of contents"},
+    {
+        t("\\tableofcontents")
+    }
+),
+
+s({trig = "lot", name = "List of tables"},
+    {
+        t("\\listoftables")
+    }
+),
+
+s({trig = "lof", name = "List of figures"},
+    {
+        t("\\listoffigures")
+    }
+),
+
+s({trig = "mki", name = "Makeindex"},
+    {
+        t("\\makeindex")
+    }
+),
+
+s({trig = "pix", name = "Print index"},
+    {
+        t("\\printindex")
+    }
+),
+
+s({trig = "pdf", name = "PDF bookmark"},
+    {
+        t("\\texorpdfstring{"), v(1,"tex"), t("}{"), i(2,"bookmark"), t("}")
+    }
+),
+
+-- Cross-references
+
+-- Labels
+
+s({trig = "lge", name = "Generic label"},
+    {
+        t("\\label{"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lsn", name = "Label section"},
+    {
+        t("\\label{sec:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lsb", name = "Label subsection"},
+    {
+        t("\\label{sub:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lss", name = "Label subsubsection"},
+    {
+        t("\\label{ssub:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lch", name = "Label chapter"},
+    {
+        t("\\label{ch:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lpa", name = "Label paragraph"},
+    {
+        t("\\label{par:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lsp", name = "Label subparagraph"},
+    {
+        t("\\label{subpar:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lbe", name = "Label equation"},
+    {
+        t("\\label{eq:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lbt", name = "Label theorem"},
+    {
+        t("\\label{thm:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lps", name = "Label proposition"},
+    {
+        t("\\label{prop:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lle", name = "Label lemma"},
+    {
+        t("\\label{lem:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lco", name = "Label corollary"},
+    {
+        t("\\label{cor:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lde", name = "Label definition"},
+    {
+        t("\\label{def:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lre", name = "Label remark"},
+    {
+        t("\\label{rem:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lex", name = "Label exercise"},
+    {
+        t("\\label{ex:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "leg", name = "Label example"},
+    {
+        t("\\label{eg:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lpn", name = "Label principle"},
+    {
+        t("\\label{princ:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lbi", name = "Label item"},
+    {
+        t("\\label{it:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lfg", name = "Label figure"},
+    {
+        t("\\label{fig:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "lta", name = "Label table"},
+    {
+        t("\\label{tbl:"), i(1,"key"), t("}")
+    }
+),
+
+-- Reference commands
+
+s({trig = "rge", name = "Generic cross-reference"},
+    {
+        t("\\ref{"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rsn", name = "Reference section"},
+    {
+        t("\\ref{sec:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rsb", name = "Reference subsection"},
+    {
+        t("\\ref{sub:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rss", name = "Reference subsubsection"},
+    {
+        t("\\ref{ssub:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rch", name = "Reference chapter"},
+    {
+        t("\\ref{ch:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rpa", name = "Reference paragraph"},
+    {
+        t("\\ref{par:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rsp", name = "Reference subparagraph"},
+    {
+        t("\\ref{subpar:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rfe", name = "Reference equation"},
+    {
+        t("\\eqref{eq:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rft", name = "Reference theorem"},
+    {
+        t("\\ref{thm:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rps", name = "Reference proposition"},
+    {
+        t("\\ref{prop:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rle", name = "Reference lemma"},
+    {
+        t("\\ref{lem:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rco", name = "Reference corollary"},
+    {
+        t("\\ref{cor:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rde", name = "Reference definition"},
+    {
+        t("\\ref{def:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rre", name = "Reference remark"},
+    {
+        t("\\ref{rem:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rex", name = "Reference exercise"},
+    {
+        t("\\ref{ex:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "reg", name = "Reference example"},
+    {
+        t("\\ref{eg:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rpn", name = "Reference principle"},
+    {
+        t("\\ref{princ:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rfi", name = "Reference item"},
+    {
+        t("\\ref{it:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rfg", name = "Reference figure"},
+    {
+        t("\\ref{fig:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rta", name = "Reference table"},
+    {
+        t("\\ref{tbl:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "rsn", name = "Reference section"},
+    {
+        t("\\ref{sec:"), i(1,"key"), t("}")
+    }
+),
+
+-- Page reference commands
+
+s({trig = "pge", name = "Generic page reference"},
+    {
+        t("\\pageref{"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "psn", name = "Page of section"},
+    {
+        t("\\pageref{sec:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "psb", name = "Page of subsection"},
+    {
+        t("\\pageref{sub:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pss", name = "Page of subsubsection"},
+    {
+        t("\\pageref{ssub:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pch", name = "Page of chapter"},
+    {
+        t("\\pageref{ch:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "ppa", name = "Page of paragraph"},
+    {
+        t("\\pageref{par:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "psp", name = "Page of subparagraph"},
+    {
+        t("\\pageref{subpar:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "peq", name = "Page of equation"},
+    {
+        t("\\eqref{eq:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pgt", name = "Page of theorem"},
+    {
+        t("\\pageref{thm:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pps", name = "Page of proposition"},
+    {
+        t("\\pageref{prop:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "ple", name = "Page of lemma"},
+    {
+        t("\\pageref{lem:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pco", name = "Page of corollary"},
+    {
+        t("\\pageref{cor:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pde", name = "Page of definition"},
+    {
+        t("\\pageref{def:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pre", name = "Page of remark"},
+    {
+        t("\\pageref{rem:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pex", name = "Page of exercise"},
+    {
+        t("\\pageref{ex:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "peg", name = "Page of example"},
+    {
+        t("\\pageref{eg:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "ppn", name = "Page of principle"},
+    {
+        t("\\pageref{princ:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pgi", name = "Page of item"},
+    {
+        t("\\pageref{it:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pfg", name = "Page of figure"},
+    {
+        t("\\pageref{fig:"), i(1,"key"), t("}")
+    }
+),
+
+s({trig = "pta", name = "Page of table"},
+    {
+        t("\\pageref{tbl:"), i(1,"key"), t("}")
+    }
+),
+
+}
