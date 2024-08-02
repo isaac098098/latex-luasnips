@@ -209,6 +209,24 @@ s({trig = "sbp", name = "Subaragraph"},
     }
 ),
 
+s({trig = "phs", name = "Hyperref jump to correct page"},
+    {
+        t("\\phantomsection")
+    }
+),
+
+s({trig = "add", name = "Add entry to list"},
+    {
+        t("\\addcontentsline{"), i(1,"file"), t("}{"), i(2,"sec-unit"), t("}{"), i(3,"list-entry"), t("}")
+    }
+),
+
+s({trig = "mkb", name = "Headers in twoside mode"},
+    {
+        t("\\markboth{"), i(1,"left"), t("}{"), i(2,"right"), t("}")
+    }
+),
+
 s({trig = "mkt", name = "Maketitle"},
     {
         t("\\maketitle")

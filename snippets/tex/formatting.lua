@@ -52,6 +52,24 @@ s({trig = "ltr", name = "Enlarged letter"},
     }
 ),
 
+s({trig = "pht", name = "Phantom text"},
+    {
+		c(1,
+		    {
+		        {
+		            t("\\phantom{"), v(1,"text"), t("}")
+		        },
+		        {
+		            t("\\hphantom{"), v(1,"text"), t("}")
+		        },
+		        {
+		            t("\\vphantom{"), v(1,"text"), t("}")
+		        }
+		    }
+		)
+    }
+),
+
 s({trig = "foo", name = "Footnote"},
     {
         t("\\footnote{"), v(1,"text"), t("}")
