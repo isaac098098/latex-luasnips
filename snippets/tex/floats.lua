@@ -50,6 +50,13 @@ s({trig = "rt", name = "Align text to right"},
     }
 ),
 
+s({trig = "hn", name = "Horizontal line"},
+    {
+        t("\\hline"),
+		t({"",""})
+    }
+),
+
 s({trig = "br", name = "Tabular row break"},
     {
         t("\\\\"),
