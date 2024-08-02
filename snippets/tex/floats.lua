@@ -20,6 +20,13 @@ s({trig = "rr", name = "Array environment"},
     }
 ),
 
+s({trig = "he", name = "Break line height"},
+    {
+        t("\\\\["), i(1), t("]"),
+		t({"",""})
+    }
+),
+
 s({trig = "hyp", name = "Hyphenate text correctly"},
     {
         t("\\hspace{0pt}")
