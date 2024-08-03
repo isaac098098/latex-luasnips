@@ -194,6 +194,7 @@ s({trig = "ena", name = "Lowercase latin enumerated list"},
 
 s({trig = "tm", name = "New item"},
     {
+		t({"",""}),
         t("\\item "), i(1)
     }
 ),
