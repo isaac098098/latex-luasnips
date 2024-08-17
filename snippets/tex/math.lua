@@ -1528,7 +1528,7 @@ s({trig = "gd", name = "Diagonal dots", snippetType = "autosnippet"},
 s({trig = "cln", name = "Colon", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\colon")
+        t(":")
     },
     {condition = in_mathzone}
 ),
@@ -1632,10 +1632,10 @@ s({trig = "da", name = "Pipes", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\left\\lvert"), d(1,get_visual), t(" \\right\\rvert")
+                    t("\\left\\lvert "), d(1,get_visual), t(" \\right\\rvert")
                 },
                 {
-                    t("\\lvert"), d(1,get_visual), t(" \\rvert")
+                    t("\\lvert "), d(1,get_visual), t(" \\rvert")
                 }
             }
         )
@@ -1649,10 +1649,10 @@ s({trig = "dn", name = "Double pipes", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\left\\lVert"), d(1,get_visual), t(" \\right\\rVert")
+                    t("\\left\\lVert "), d(1,get_visual), t(" \\right\\rVert")
                 },
                 {
-                    t("\\lVert"), d(1,get_visual), t(" \\rVert")
+                    t("\\lVert "), d(1,get_visual), t(" \\rVert")
                 }
             }
         )
