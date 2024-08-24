@@ -464,7 +464,7 @@ s({trig = "¨", name = "Superscript", snippetType = "autosnippet", wordTrig = fa
     {condition = in_mathzone}
 ),
 
-s({trig = "'", name = "Subscript and superscript", snippetType = "autosnippet", wordtrig = false},
+s({trig = "\'", name = "Subscript and superscript", snippetType = "autosnippet", wordTrig = false},
     {
 		t("_{"), i(1), t("}^{"), i(2), t("}")
     },
@@ -1176,7 +1176,7 @@ s({trig = "lm", name = "Limit", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\lim_{"), i(1,"..."), t(" \\to "), i(2,"..."), t("}")
+                    t("\\lim_{"), i(1), t(" \\to "), i(2), t("}")
                 },
                 {
 					i(1,"\\lim")
@@ -1193,7 +1193,7 @@ s({trig = "lif", name = "liminf", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\liminf_{"), i(1,"..."), t(" \\to "), i(2,"..."), t("}")
+                    t("\\liminf_{"), i(1), t(" \\to "), i(2), t("}")
                 },
                 {
 					i(1,"\\liminf")
@@ -1210,7 +1210,7 @@ s({trig = "lsu", name = "limsup", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\limsup_{"), i(1,"..."), t(" \\to "), i(2,"..."), t("}")
+                    t("\\limsup_{"), i(1), t(" \\to "), i(2), t("}")
                 },
                 {
 					i(1,"\\limsup")
@@ -1227,7 +1227,7 @@ s({trig = "lvf", name = "varliminf", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\varliminf_{"), i(1,"..."), t(" \\to "), i(2,"..."), t("}")
+                    t("\\varliminf_{"), i(1), t(" \\to "), i(2), t("}")
                 },
                 {
 					i(1,"\\varliminf")
@@ -1244,7 +1244,7 @@ s({trig = "lvu", name = "varlimsup", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\varlimsup_{"), i(1,"..."), t(" \\to "), i(2,"..."), t("}")
+                    t("\\varlimsup_{"), i(1), t(" \\to "), i(2), t("}")
                 },
                 {
 					i(1,"\\varlimsup")
@@ -1760,7 +1760,7 @@ s({trig = "tkn", name = "Negative thick space", snippetType = "autosnippet"},
 s({trig = "hs", name = "Horizontal space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\hspace{"), i(1,"..."), t("}")
+        t("\\hspace{"), i(1), t("}")
     },
     {condition = in_mathzone}
 ),
@@ -1768,7 +1768,7 @@ s({trig = "hs", name = "Horizontal space", snippetType = "autosnippet"},
 s({trig = "vs", name = "Vertical space", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\vspace{"), i(1,"..."), t("}")
+        t("\\vspace{"), i(1), t("}")
     },
     {condition = in_mathzone}
 ),
@@ -1818,16 +1818,7 @@ s({trig = "[.]d", name = "Lowercase delta", snippetType = "autosnippet", regTrig
 s({trig = "[.]e", name = "Epsilon", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        c(1,
-            {
-                {
-                    i(1,"\\varepsilon")
-                },
-                {
-                    i(1,"\\epsilon")
-                }
-            }
-        )
+		t("\\varepsilon")
     },
     {condition = in_mathzone}
 ),
