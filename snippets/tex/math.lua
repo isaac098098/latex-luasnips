@@ -1291,7 +1291,7 @@ s({trig = "co", name = "cos", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "tn", name = "tan", snippetType = "autosnippet"},
+s({trig = "tan", name = "tan", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\tan")
