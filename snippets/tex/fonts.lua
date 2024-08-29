@@ -37,7 +37,7 @@ s({trig = "fot", name = "Footnote size"},
     }
 ),
 
-s({trig = "sml", name = "Small font size"},
+s({trig = "sma", name = "Small font size"},
     {
         t("\\small")
     }
