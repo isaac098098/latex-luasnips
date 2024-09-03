@@ -474,7 +474,7 @@ s({trig = "\'", name = "Subscript and superscript", snippetType = "autosnippet",
 s({trig = "st", name = "Stacking", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\substack{"), v(1,"..."), t(" \\\\ "), i(2,"..."), t("}")
+        t("\\substack{"), i(1), t(" \\\\ "), i(2), t("}")
     },
     {condition = in_mathzone}
 ),
