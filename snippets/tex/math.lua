@@ -196,14 +196,14 @@ s({trig = "nn", name = "New equation"},
         c(1,
             {
                 {
-                    t("\\begin{equation}"),
-					t({"",""}), t("    "), d(1,get_visual),
-					t({"",""}), t("\\end{equation}")
-                },
-                {
                     t("\\begin{equation*}"),
 					t({"",""}), t("    "), d(1,get_visual),
 					t({"",""}), t("\\end{equation*}")
+                },
+                {
+                    t("\\begin{equation}"),
+					t({"",""}), t("    "), d(1,get_visual),
+					t({"",""}), t("\\end{equation}")
                 }
             }
         )
@@ -385,12 +385,11 @@ s({trig = "tag", name = "Equation tag", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "teq", name = "Last number equation", snippetType = "autosnippet"},
+s({trig = "teq", name = "Last number equation"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\theequation")
-    },
-    {condition = in_mathzone}
+    }
 ),
 
 -- Matrix-like environments
@@ -2187,12 +2186,11 @@ s({trig = "nb", name = "Nabla", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "ch", name = "Section symbol", snippetType = "autosnippet"},
+s({trig = "ch", name = "Section symbol"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\S")
-    },
-    {condition = in_mathzone}
+    }
 ),
 
 -- Accents
@@ -2651,7 +2649,7 @@ s({trig = "nop", name = "Definite o-product", snippetType = "autosnippet"},
 s({trig = "df", name = "Differential", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
-        t("\\dx")
+        t("\\dx{"), i(1), t("}")
     },
     {condition = in_mathzone}
 ),

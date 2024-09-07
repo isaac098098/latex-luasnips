@@ -88,6 +88,12 @@ s({trig = "npg", name = "New page"},
     }
 ),
 
+s({trig = "pp", name = "Hardcoded line break"},
+    {
+        t({"",""}),	t("\\par $ $"),	t({"",""}),	t({"",""})
+    }
+),
+
 -- Columns
 
 s({trig = "mul", name = "Multicolumns"},
