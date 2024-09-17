@@ -154,7 +154,7 @@ s(
 		\newcommand{\notesprof}{<>}
 		\newcommand{\notesauthor}{<>}
 
-		\input{preamble.tex}
+		\input{../preamble.tex}
 
 		\input{<>}
 
@@ -249,8 +249,7 @@ s(
     {
         i(1),
         i(2),
-        i(3),
-        i(4),
+        i(3)
     }
     )
 ),
