@@ -88,10 +88,41 @@ s({trig = "npg", name = "New page"},
     }
 ),
 
-s({trig = "pp", name = "Hardcoded line break"},
+s({trig = "pp", name = "Paragraph break"},
     {
-        --t({"",""}),	t("\\par $ $"),	t({"",""}),	t({"",""})
         t({"",""}),	t("\\bigskip"),	t({"",""}),	t({"",""})
+    }
+),
+
+s({trig = "fbo", name = "Frame box"},
+    {
+        t("\\fbox{"),
+		t({"",""}),	t("    "), d(1,get_visual),
+		t({"",""}),	t("}")
+    }
+),
+
+s({trig = "fco", name = "Color frame box"},
+    {
+        t("\\fcolorbox{"), i(1,"border-color"), t("}{"), i(2,"bg-color"), t("}{"),
+		t({"",""}),	t("    "), d(3,get_visual),
+		t({"",""}),	t("}")
+    }
+),
+
+s({trig = "cen", name = "Centered environment"},
+    {
+        t("\\begin{center}"),
+		t({"",""}),	t("    "), d(1,get_visual),
+		t({"",""}),	t("\\end{center}")
+    }
+),
+
+s({trig = "min", name = "Minpage environment"},
+    {
+        t("\\begin{minipage}{\\linewidth-3\\fboxsep-3\\fboxrule}"),
+		t({"",""}),	t("    "), d(1,get_visual),
+		t({"",""}),	t("\\end{minipage}")
     }
 ),
 

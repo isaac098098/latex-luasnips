@@ -2257,10 +2257,10 @@ s({trig = "til", name = "Tilde", snippetType = "autosnippet"},
         c(1,
             {
                 {
-                    t("\\tilde{"), v(1,"..."), t("}")
+                    t("\\tilde{"), i(1), t("}")
                 },
                 {
-                    t("\\widetilde{"), v(1,"..."), t("}")
+                    t("\\widetilde{"), i(1), t("}")
                 }
             }
         )
