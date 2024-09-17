@@ -150,6 +150,7 @@ s(
     {trig = "math-notes", dscr = "Math notes"},
     fmta(
     [[
+		%! TeX root = main.tex
 		\newcommand{\notestitle}{<>}
 		\newcommand{\notesprof}{<>}
 		\newcommand{\notesauthor}{<>}
