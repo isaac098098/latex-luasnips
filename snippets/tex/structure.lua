@@ -269,6 +269,24 @@ s({trig = "pdf", name = "PDF bookmark"},
     }
 ),
 
+s({trig = "lec", name = "Lecture section"},
+    {
+        t("\\seclecture{"), v(1,"title"), t("}{"), i(2,"date"), t("}")
+    }
+),
+
+s({trig = "les", name = "Lecture subsection"},
+    {
+        t("\\sublecture{"), v(1,"title"), t("}{"), i(2,"date"), t("}")
+    }
+),
+
+s({trig = "date", name = "Print current date"},
+    {
+		f(function() return os.date("%a %d %b %y") end)
+    }
+),
+
 -- Cross-references
 
 -- Labels
@@ -397,127 +415,361 @@ s({trig = "lta", name = "Label table"},
 
 s({trig = "rge", name = "Generic cross-reference"},
     {
-        t("\\ref{"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rsn", name = "Reference section"},
     {
-        t("\\ref{sec:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{sec:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{sec:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{sec:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rsb", name = "Reference subsection"},
     {
-        t("\\ref{sub:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{sub:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{sub:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{sub:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rss", name = "Reference subsubsection"},
     {
-        t("\\ref{ssub:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{ssub:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{ssub:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{ssub:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rch", name = "Reference chapter"},
     {
-        t("\\ref{ch:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{ch:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{ch:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{ch:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rpa", name = "Reference paragraph"},
     {
-        t("\\ref{par:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{par:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{par:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{par:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rsp", name = "Reference subparagraph"},
     {
-        t("\\ref{subpar:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{subpar:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{subpar:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{subpar:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rfe", name = "Reference equation"},
     {
-        t("\\eqref{eq:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\eqref{eq:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{eq:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{eq:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rft", name = "Reference theorem"},
     {
-        t("\\ref{thm:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{thm:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{thm:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{thm:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rps", name = "Reference proposition"},
     {
-        t("\\ref{prop:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{prop:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{prop:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{prop:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rle", name = "Reference lemma"},
     {
-        t("\\ref{lem:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{lem:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{lem:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{lem:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rco", name = "Reference corollary"},
     {
-        t("\\ref{cor:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{cor:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{cor:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{cor:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rde", name = "Reference definition"},
     {
-        t("\\ref{def:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{def:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{def:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{def:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rre", name = "Reference remark"},
     {
-        t("\\ref{rem:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{rem:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{rem:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{rem:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rex", name = "Reference exercise"},
     {
-        t("\\ref{ex:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{ex:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{ex:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{ex:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "reg", name = "Reference example"},
     {
-        t("\\ref{eg:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{eg:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{eg:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{eg:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rpn", name = "Reference principle"},
     {
-        t("\\ref{princ:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{princ:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{princ:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{princ:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rfi", name = "Reference item"},
     {
-        t("\\ref{it:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{it:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{it:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{it:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rfg", name = "Reference figure"},
     {
-        t("\\ref{fig:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{fig:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{fig:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{fig:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "rta", name = "Reference table"},
     {
-        t("\\ref{tbl:"), i(1,"key"), t("}")
-    }
-),
-
-s({trig = "rsn", name = "Reference section"},
-    {
-        t("\\ref{sec:"), i(1,"key"), t("}")
+		c(1,
+		    {
+		        {
+        			t("\\ref{tbl:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\cref{tbl:"), i(1,"key"), t("}")
+		        },
+		        {
+        			t("\\Cref{tbl:"), i(1,"key"), t("}")
+		        }
+		    }
+		)
     }
 ),
 

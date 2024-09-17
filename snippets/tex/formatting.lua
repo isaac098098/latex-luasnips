@@ -90,7 +90,8 @@ s({trig = "npg", name = "New page"},
 
 s({trig = "pp", name = "Hardcoded line break"},
     {
-        t({"",""}),	t("\\par $ $"),	t({"",""}),	t({"",""})
+        --t({"",""}),	t("\\par $ $"),	t({"",""}),	t({"",""})
+        t({"",""}),	t("\\bigskip"),	t({"",""}),	t({"",""})
     }
 ),
 

@@ -953,6 +953,14 @@ s({trig = "dv", name = "Middle bar", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
+s({trig = "ndv", name = "Middle bar", snippetType = "autosnippet"},
+    {
+		f(function(_,snip) return snip.captures[1] end),
+        t("\\centernot\\mid")
+    },
+    {condition = in_mathzone}
+),
+
 s({trig = "xm", name = "Maximum", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
