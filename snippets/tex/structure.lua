@@ -287,6 +287,12 @@ s({trig = "date", name = "Print current date"},
     }
 ),
 
+s({trig = "tim", name = "Margin paragraph timestamp"},
+    {
+		t("\\marginpar{\\footnotesize\\textsf{\\mbox{"), i(1,"date"), t("}}}")
+    }
+),
+
 -- Cross-references
 
 -- Labels
