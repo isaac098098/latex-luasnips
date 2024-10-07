@@ -41,8 +41,7 @@ sudo chmod +x install.sh
 
 **Warning 2**: This installation method assumes that your snippets live in the directory `$HOME/.config/nvim/lua/plugins/luasnip/`, if not simply copy the contents of `snippets/` to the appropiate place.
 
-<details>
-<summary>Showcase</summary>
+## Gifs
 
 ### Hodge conjecture
 
