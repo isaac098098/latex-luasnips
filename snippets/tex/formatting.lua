@@ -96,17 +96,35 @@ s({trig = "pp", name = "Paragraph break"},
 
 s({trig = "fbo", name = "Frame box"},
     {
-        t("\\fbox{"),
-		t({"",""}),	t("    "), d(1,get_visual),
-		t({"",""}),	t("}")
+		c(1,
+		    {
+		        {
+					t("\\fbox{"),
+					t({"",""}),	t("    "), d(1,get_visual),
+					t({"",""}),	t("}")
+		        },
+		        {
+					t("\\fbox{"), d(1,get_visual), t("}")
+		        }
+		    }
+		)
     }
 ),
 
 s({trig = "fco", name = "Color frame box"},
     {
-        t("\\fcolorbox{"), i(1,"border-color"), t("}{"), i(2,"bg-color"), t("}{"),
-		t({"",""}),	t("    "), d(3,get_visual),
-		t({"",""}),	t("}")
+		c(1,
+		    {
+		        {
+					t("\\fcolorbox{"), i(1,"border-color"), t("}{"), i(2,"bg-color"), t("}{"),
+					t({"",""}),	t("    "), d(3,get_visual),
+					t({"",""}),	t("}")
+		        },
+		        {
+					t("\\fcolorbox{"), i(1,"border-color"), t("}{"), i(2,"bg-color"), t("}{"), d(3,get_visual), t("}")
+		        }
+		    }
+		)
     }
 ),
 
