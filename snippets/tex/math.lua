@@ -628,6 +628,15 @@ s({trig = "eq", name = "Congruence relation", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
+s({trig = "md", name = "Mod operator", snippetType = "autosnippet"},
+    {
+		f(function(_,snip) return snip.captures[1] end),
+        t("\\Mod{"), i(1), t("}")
+    },
+    {condition = in_mathzone}
+),
+
+-- local macro
 s({trig = "mod", name = "Modular relation", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),

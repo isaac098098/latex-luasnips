@@ -173,7 +173,7 @@ s({trig = "prt", name = "Part"},
     }
 ),
 
-s({trig = "par", name = "Paragraph"},
+s({trig = "pr", name = "Paragraph"},
     {
         c(1,
             {
