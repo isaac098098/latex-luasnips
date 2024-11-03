@@ -144,6 +144,34 @@ s({trig = "min", name = "Minpage environment"},
     }
 ),
 
+s({trig = "code", name = "Code chunk"},
+    {
+       c(1,
+           {
+               {
+                   t("{"),
+                   t({"",""}), t("\\renewcommand\\ttdefault{cmtt}"),
+                   t({"",""}), t("    \\begin{adjustwidth}{12mm+2mm}{2mm}"),
+                   t({"",""}), t("        \\lstinputlisting{"), i(1), t("}"),
+                   t({"",""}), t("    \\end{adjustwidth}"),
+                   t({"",""}),
+                   t({"",""}), t("}")
+               },
+               {
+                   t("{"),
+                   t({"",""}), t("\\renewcommand\\ttdefault{cmtt}"),
+                   t({"",""}), t("\\begin{adjustwidth}{12mm+2mm}{2mm}"),
+                   t({"",""}), t("\\begin{lstlisting}"),
+                   t({"",""}), i(1),
+                   t({"",""}), t("\\end{lstlisting}"),
+                   t({"",""}), t("\\end{adjustwidth}"),
+                   t({"",""}), t("}")
+               }
+           }
+       ) 
+    }
+),
+
 -- Columns
 
 s({trig = "mul", name = "Multicolumns"},
