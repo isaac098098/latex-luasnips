@@ -154,20 +154,20 @@ s(
     \newcommand{\notesprof}{<>}
     \newcommand{\notesauthor}{<>}
 
-    \input{preamble.tex}
-
+    \input{pream.tex}
     \begin{document}
-    %\pagenumbering{roman}
-    %\maketitle
-    %\thispagestyle{plain}
-    %\tableofcontents
-    %\newpage
+    \pagenumbering{roman}
+    \maketitle
+    \thispagestyle{plain}
+    \tableofcontents
+    \newpage
     \pagestyle{title-subsection}
     \pagenumbering{arabic}
 
     \input{<>}
 
-    \input{bibliography.tex}
+    \input{eof.tex}
+    \end{document}
     ]],
     {
         i(1,"Title"),
