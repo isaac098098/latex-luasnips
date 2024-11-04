@@ -154,26 +154,25 @@ s(
     \newcommand{\notesprof}{<>}
     \newcommand{\notesauthor}{<>}
 
-    \input{pream.tex}
+    \input{$HOME/notes/pream.tex}
     \begin{document}
-    \pagenumbering{roman}
-    \maketitle
-    \thispagestyle{plain}
-    \tableofcontents
-    \newpage
-    \pagestyle{title-subsection}
-    \pagenumbering{arabic}
+    % \pagenumbering{roman}
+    % \maketitle
+    % \thispagestyle{plain}
+    % \tableofcontents
+    % \newpage
+    % \pagestyle{title-subsection}
+    % \pagenumbering{arabic}
 
-    \input{<>}
+    \input{lec_01.tex}
 
-    \input{eof.tex}
+    \input{$HOME/notes/eof.tex}
     \end{document}
     ]],
     {
         i(1,"Title"),
         i(2,"Profesor/course"),
         i(3,"Author"),
-        i(4,"File")
     }
     )
 ),
