@@ -271,13 +271,15 @@ s({trig = "pdf", name = "PDF bookmark"},
 
 s({trig = "lec", name = "Lecture section"},
     {
-        t("\\seclecture{"), v(1,"title"), t("}{"), i(2,"date"), t("}")
+        t("%%% "), v(1,"title"),
+        t({"",""}), t("\\seclecture{"), rep(1), t("}{"), i(2,"date"), t("}")
     }
 ),
 
 s({trig = "les", name = "Lecture subsection"},
     {
-        t("\\sublecture{"), v(1,"title"), t("}{"), i(2,"date"), t("}")
+        t("%%% "), v(1,"title"),
+        t({"",""}), t("\\sublecture{"), rep(1), t("}{"), i(2,"date"), t("}")
     }
 ),
 
