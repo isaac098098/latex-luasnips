@@ -154,7 +154,7 @@ s(
     \newcommand{\notesprof}{<>}
     \newcommand{\notesauthor}{<>}
 
-    \input{$HOME/notes/pream.tex}
+    \input{../pream.tex}
     \begin{document}
     % \pagenumbering{roman}
     % \maketitle
@@ -166,7 +166,7 @@ s(
 
     \input{lec_01.tex}
 
-    \input{$HOME/notes/eof.tex}
+    \input{../eof.tex}
     \end{document}
     ]],
     {

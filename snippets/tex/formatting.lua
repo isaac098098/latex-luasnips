@@ -172,6 +172,17 @@ s({trig = "code", name = "Code chunk"},
     }
 ),
 
+s({trig = "incsvg", name = "Include svg image", snippetType = "autosnippet" },
+    {
+        t("\\begin{figure}[ht]"),
+        t({"",""}), t("    \\centering"),
+        t({"",""}), t("    \\includesvg[width=0.7\\columnwidth]{diagrams/"), i(1), t(".svg}"),
+        t({"",""}), t("    \\caption{"), i(2), t("}"),
+        t({"",""}), t("    \\label{fig:"), rep(1), t("}"),
+        t({"",""}), t("\\end{figure}")
+    }
+),
+
 -- Columns
 
 s({trig = "mul", name = "Multicolumns"},

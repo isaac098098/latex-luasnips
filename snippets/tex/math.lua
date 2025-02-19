@@ -463,13 +463,6 @@ s({trig = "¨", name = "Superscript", snippetType = "autosnippet", wordTrig = fa
     {condition = in_mathzone}
 ),
 
-s({trig = "\'", name = "Subscript and superscript", snippetType = "autosnippet", wordTrig = false},
-    {
-		t("_{"), i(1), t("}^{"), i(2), t("}")
-    },
-    {condition = in_mathzone}
-),
-
 s({trig = "st", name = "Stacking", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
@@ -1291,7 +1284,7 @@ s({trig = "fd", name = "Function definition"},
     }
 ),
 
-s({trig = "sni", name = "sin", snippetType = "autosnippet"},
+s({trig = "sin", name = "sin", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sin")
@@ -1299,7 +1292,7 @@ s({trig = "sni", name = "sin", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "co", name = "cos", snippetType = "autosnippet"},
+s({trig = "cos", name = "cos", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cos")
@@ -1315,7 +1308,7 @@ s({trig = "tan", name = "tan", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "ot", name = "cot", snippetType = "autosnippet"},
+s({trig = "cot", name = "cot", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\cot")
@@ -1323,7 +1316,7 @@ s({trig = "ot", name = "cot", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "sc", name = "sec", snippetType = "autosnippet"},
+s({trig = "sec", name = "sec", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sec")
@@ -1419,7 +1412,7 @@ s({trig = "coth", name = "coth", snippetType = "autosnippet"},
     {condition = in_mathzone}
 ),
 
-s({trig = "sh", name = "sech", snippetType = "autosnippet"},
+s({trig = "sch", name = "sech", snippetType = "autosnippet"},
     {
 		f(function(_,snip) return snip.captures[1] end),
         t("\\sech")
@@ -1938,7 +1931,7 @@ s({trig = "[.]Ph", name = "Uppercase phi", snippetType = "autosnippet", regTrig 
 s({trig = "[.]ph", name = "Lowecase phi", snippetType = "autosnippet", regTrig = true},
     {
 		f(function(_,snip) return snip.captures[1] end),
-		t("\\phi")
+		t("\\varphi")
     },
     {condition = in_mathzone}
 ),
